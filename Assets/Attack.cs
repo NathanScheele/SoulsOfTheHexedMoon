@@ -22,12 +22,15 @@ public class Attack : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D collider){
-        float now = Time.time;
-        float elapsed_time = now - last_attack;
 
-        if(elapsed_time >= 0.75){
-            last_attack = now;
-            Debug.Log("Enemy attacked for " + enemy_script.atk_dmg + " damage.");
+        if(collider.CompareTag("player")){
+            float now = Time.time;
+            float elapsed_time = now - last_attack;
+
+            if(elapsed_time >= 0.75){
+                last_attack = now;
+                Debug.Log("Enemy attacked for " + enemy_script.atk_dmg + " damage.");
+            }
         }
     }
 }
