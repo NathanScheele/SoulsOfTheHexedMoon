@@ -22,17 +22,12 @@ public class AttackBehaviour : StateMachineBehaviour
         player_pos = game_handler_script.getPlayerPos();
         float distance_to_player = Vector2.Distance(animator.transform.position, player_pos);
 
-        Debug.Log(distance_to_player);
-
         // Check for state changes
         if(distance_to_player >= enemy_script.atk_range){ // Start following
             animator.SetBool("isAttacking", false);
         }
-        else{ //Attack!
-            //TODO
-            //Actually inflict damage
-            Debug.Log("Enemy attacked Player for " + enemy_script.atk_dmg + " damage.");
-        }
+        
+        //Attacking is handled in Attack.cs, which is attached to the attack appendage
     }
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {

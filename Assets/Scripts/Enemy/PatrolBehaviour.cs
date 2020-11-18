@@ -27,7 +27,7 @@ public class PatrolBehaviour : StateMachineBehaviour
 
         waypoints = new Vector2[] {new Vector2(spawn.x - patrol_radius, spawn.y), new Vector2(spawn.x + patrol_radius, spawn.y)};
 
-        currWaypoint = Random.Range(0, waypoints.Length);
+        currWaypoint = 0;
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -36,7 +36,6 @@ public class PatrolBehaviour : StateMachineBehaviour
         float distance_to_player = Vector2.Distance(animator.transform.position, player_pos);
 
         if(distance_to_player <= enemy_script.follow_radius){ // Start following
-            Debug.Log("Starting to Follow");
             animator.SetBool("isFollowing", true);
         }
         else{//Patrol
@@ -45,6 +44,10 @@ public class PatrolBehaviour : StateMachineBehaviour
             }
             else{//Acquire new waypoint
                 currWaypoint = (currWaypoint + 1) % 2;
+
+                float y_angle = animator.transform.rotation.y == 0 ? 180 : 0;
+
+                animator.transform.eulerAngles = new Vector3(0, y_angle, 0);
             }
         }
     }

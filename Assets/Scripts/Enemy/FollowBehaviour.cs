@@ -21,18 +21,20 @@ public class FollowBehaviour : StateMachineBehaviour
     {
         player_pos = game_handler_script.getPlayerPos();
         float distance_to_player =  Vector2.Distance(animator.transform.position, player_pos);
-        Debug.Log(player_pos);
+
         // Check for state changes
         if(distance_to_player > enemy_script.follow_radius){ // Player too far away; resume patrol
-            Debug.Log("Starting to Patrol");
             animator.SetBool("isFollowing",false);
         }
         else if(distance_to_player <= enemy_script.atk_range){ // Attack!
-            Debug.Log("Starting to Attack");
             animator.SetBool("isAttacking", true);
         }
         else{ // Continue following
             animator.transform.position = Vector2.MoveTowards(animator.transform.position, player_pos, enemy_script.speed * Time.deltaTime);
+
+            float y_angle = player_pos.x < animator.transform.position.x ? 0 : 180;
+
+            animator.transform.eulerAngles = new Vector3(0, y_angle, 0);
         } 
     }
 
