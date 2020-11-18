@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyOne : MonoBehaviour
+public class Enemy: MonoBehaviour
 {
+    // Location of this Enemy's spawn point (used to determine patrol route)
     Vector2 spawn;
 
-    public float patrolRadius, speed, health, atkDamage, atkCoolDown;
+    // Public variables used to make different enemy types 
+    public float patrol_radius, speed, atk_dmg, atk_range, follow_radius;
     
     // Start is called before the first frame update
     void Start()
@@ -22,9 +24,5 @@ public class EnemyOne : MonoBehaviour
 
     public Vector2 getSpawn(){
         return this.spawn;
-    }
-
-    public void takeDamage(float incomingDmg){
-        this.health = Mathf.Max(0, this.health - incomingDmg);
     }
 }
