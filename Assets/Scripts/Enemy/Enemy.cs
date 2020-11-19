@@ -9,8 +9,10 @@ public class Enemy: MonoBehaviour
 
     Animator m_animator;
 
+    Rigidbody2D m_rigidbody;
+
     // Public variables used to make different enemy types 
-    public float patrol_radius, speed, atk_dmg, atk_range, follow_radius, health;
+    public float patrol_radius, speed, atk_dmg, atk_range, atk_cooldown, follow_radius, health;
     
     // Start is called before the first frame update
     void Start()
@@ -18,6 +20,7 @@ public class Enemy: MonoBehaviour
         spawn = gameObject.transform.position;
 
         m_animator = gameObject.GetComponent<Animator>();
+        m_rigidbody = gameObject.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
