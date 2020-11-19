@@ -16,7 +16,7 @@ TagManager:
   - 
   - Enemy
   - Player
-  - 
+  - LoS
   - 
   - 
   - 
@@ -47,4 +47,7 @@ TagManager:
     locked: 0
   - name: GameObjects
     uniqueID: 888182867
+    locked: 0
+  - name: LoS
+    uniqueID: 953802009
     locked: 0
