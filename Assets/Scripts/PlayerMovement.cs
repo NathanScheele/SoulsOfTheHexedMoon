@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public GameObject text, moreText;
     public float speed;
-    public float jumpSpeed = 8;
+    float jumpSpeed = 8;
     float jumpTime = 1f;
     public float timeSinceAttack = 1.5f;
 
