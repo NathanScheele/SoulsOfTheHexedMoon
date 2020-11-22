@@ -6,34 +6,28 @@ public class Enemy: MonoBehaviour
 {
     // Location of this Enemy's spawn point (used to determine patrol route)
     Vector2 spawn;
-
+    Rigidbody2D m_rigidbody;
     Animator m_animator;
 
-    Rigidbody2D m_rigidbody;
-
-    GameObject line_of_sight_obj;
-
-    SpriteRenderer m_renderer;
 
     // Public variables used to make different enemy types 
-    public float patrol_radius, speed, atk_dmg, atk_range, atk_cooldown, los_w, los_h, health;
+    public float l_patrol_dist, r_patrol_dist, speed, atk_dmg, atk_range, los_w, los_h, health;
+    public bool view_LoS, view_patrol_area;
+    public float dir;
+
+    float last_dmg;
     
     // Start is called before the first frame update
     void Start()
     {
-        spawn = gameObject.transform.position;
+        spawn = transform.position;
 
-        m_animator = gameObject.GetComponent<Animator>();
         m_rigidbody = gameObject.GetComponent<Rigidbody2D>();
+        m_animator = gameObject.GetComponent<Animator>();
 
+        dir = -1;
 
-        line_of_sight_obj = transform.GetChild(1).gameObject;
-
-        m_renderer = line_of_sight_obj.GetComponent<SpriteRenderer>();
-
-        line_of_sight_obj.transform.localScale = new Vector3(los_h, los_w, line_of_sight_obj.transform.localScale.z);
-
-        m_renderer.color = new Color(m_renderer.color.r, m_renderer.color.g, m_renderer.color.b, 0);
+        last_dmg = 0;
     }
 
     // Update is called once per frame
@@ -46,12 +40,58 @@ public class Enemy: MonoBehaviour
         return this.spawn;
     }
 
-    public void takeDmg(float incoming_dmg){
+    public void MoveTowards(Vector2 target){
 
-        health = health - incoming_dmg < 0 ? 0 : health - incoming_dmg;
+        //Make sure you're facing the target
+        if(target.x < transform.position.x && dir == 1){
+            transform.Rotate(new Vector3(0,180,0));
+            dir *= -1;
+        }
+        else if(target.x > transform.position.x && dir == -1){
+            transform.Rotate(new Vector3(0,180,0));
+            dir *= -1;
+        }
+
+        Vector2 direction = new Vector2(target.x - transform.position.x, 0).normalized;
+        m_rigidbody.velocity = new Vector2(direction.x * speed, m_rigidbody.velocity.y);
+
+    }
+
+    void OnDrawGizmos(){
+        if(view_patrol_area){
+            Gizmos.color = Color.blue;
+
+            Vector2 left = -transform.right * l_patrol_dist;
+            Vector2 right = transform.right * r_patrol_dist;
+
+            if(spawn == new Vector2()){
+                Gizmos.DrawRay(transform.position, left);
+                Gizmos.DrawRay(transform.position, right);
+            }
+            else{
+                Gizmos.DrawRay(spawn, left);
+                Gizmos.DrawRay(spawn, right);
+            }        
+        }
+    }
+
+    public void takeDmg(float incoming_dmg){
+        float elapsed_time = Time.time - last_dmg;
+
+        if(elapsed_time > 1){
+            health = Mathf.Max(0, health - incoming_dmg);
+        }
 
         if(health == 0){
-            m_animator.SetBool("isDead", true);
+            m_animator.SetBool("isDead",true);
         }
+    }
+
+    public void die(){
+        //TODO
+        //Actually spawn item
+        Debug.Log("Bloody Heart dropped");
+
+        Destroy(gameObject);
     }
 }

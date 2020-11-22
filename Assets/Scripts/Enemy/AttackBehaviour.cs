@@ -26,8 +26,6 @@ public class AttackBehaviour : StateMachineBehaviour
         if(distance_to_player >= enemy_script.atk_range){ // Start following
             animator.SetBool("isAttacking", false);
         }
-        
-        //Attacking is handled in Attack.cs, which is attached to the attack appendage
     }
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
