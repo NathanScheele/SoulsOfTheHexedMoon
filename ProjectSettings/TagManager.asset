@@ -3,15 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-<<<<<<< Updated upstream
-  tags: []
-=======
   tags:
   - Enemy
   - Blue
   - Ground
   - PowerUp
->>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
@@ -21,11 +17,11 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Enemy
+  - Player
+  - LoS
+  - HitBox
+  - HurtBox
   - 
   - 
   - 
@@ -46,6 +42,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 2893676563
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: GameObjects
+    uniqueID: 888182867
+    locked: 0
+  - name: LoS
+    uniqueID: 953802009
     locked: 0
