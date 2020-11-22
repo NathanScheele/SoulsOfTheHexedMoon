@@ -6,43 +6,83 @@ public class PlayerMovement : MonoBehaviour
 {
     public GameObject text, moreText;
     public float speed;
-    public float jumpSpeed = 8;
+    float jumpSpeed = 8;
     float jumpTime = 1f;
     public float timeSinceAttack = 1.5f;
 
-    bool moving;
+    public bool playing;
+    public bool moving;
+    bool facingRight = true;
     bool startAttackTime;
-    public bool OnGround;
+    bool OnGround;
     bool jTimeStart;
+    bool enemyClose;
     Rigidbody2D rb;
+    Animator anim;
+    Vector3 localScale;
+
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+        playing = true;
         moving = true;
+        enemyClose = false;
+        localScale = transform.localScale;
+
     }
 
     // Update is called once per frame
     void Update()
     {
         float hMove = Input.GetAxis("Horizontal");
-        if (moving)
+        if(hMove > 0)
         {
-            // Moves player left or right
-            rb.velocity = new Vector2(hMove * speed, rb.velocity.y);
+            anim.SetBool("Run", true);
+            facingRight = true;
+        }
+        else if(hMove < 0)
+        {
+            anim.SetBool("Run", true);
+            facingRight = false;
+        }
+        else if(hMove == 0)
+        {
+            anim.SetBool("Run", false);
+        }
+        if (((facingRight) && (localScale.x < 0)) || ((!facingRight) && (localScale.x > 0)))
+        {
+            localScale.x *= -1;
+        }
+        transform.localScale = localScale;
+        if (playing)
+        {
+            if (moving)
+            {
+                // Moves player left or right
+                rb.velocity = new Vector2(hMove * speed, rb.velocity.y);
+            }
+            
+            Jump();
+            Attack();
         }
 
-        Jump();
-        Attack();
+        if(OnGround == false)
+        {
+            anim.SetBool("OnGround", OnGround);
+        }
+        
 
     }
 
     void Jump()
     {
         //if user presses spacebar and only if player is grounded, player jumps
-        if (Input.GetKeyDown(KeyCode.Space) && OnGround && jTimeStart == false)
+        if (Input.GetKeyDown(KeyCode.Space) &&/* OnGround &&*/ jTimeStart == false)
         {
+            anim.SetTrigger("Jump");
             rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
             text.SetActive(false); // disables text
             jTimeStart = true; // start next jump time
@@ -65,13 +105,21 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.J) && timeSinceAttack == 0)
         {
             Debug.Log("Attack1");
+            anim.SetTrigger("Bite");
             timeSinceAttack = 1.5f;
             startAttackTime = true;
 
         }
+
+        //hurts enemy when in range and attacks
+        if(Input.GetKeyDown(KeyCode.J) && enemyClose)
+        {
+            Debug.Log("enemy hurt");
+        }
         
         if (Input.GetKeyDown(KeyCode.K) && timeSinceAttack == 0)
         {
+            anim.SetTrigger("Scratch");
             Debug.Log("Attack2");
             timeSinceAttack = 1.5f;
             startAttackTime = true;
@@ -80,6 +128,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.L) && timeSinceAttack == 0 &&  OnGround)
         {
             //Stops player movement for 1.5f 
+            anim.SetTrigger("Howl");
             moving = false;
             moreText.SetActive(false);
             Debug.Log("ULTIMATE HOWL!");
@@ -106,23 +155,15 @@ public class PlayerMovement : MonoBehaviour
             OnGround = true;
         }
 
+        //Enemy has to have a empty gameobject child with a collider and trigger selected,
+        //also to have tag name as EnemyArea for that child
         /*
-        if (other.gameObject.CompareTag("Enemy1"))
+        if (other.gameObject.CompareTag("EnemyArea"))
         {
-            //Hurts player, takes away HP
-        }
-        
-        if (other.gameObject.CompareTag("Enemy2"))
-        {
-            //Hurts player, takes away more HP
-        }
-        
-        if (other.gameObject.CompareTag("Enemy3"))
-        {
-            //Hurts player, takes away HP
+            //player is in range of the enemy
+            enemyClose = true;
         }
         */
-
     }
 
     void OnTriggerExit2D(Collider2D other)
