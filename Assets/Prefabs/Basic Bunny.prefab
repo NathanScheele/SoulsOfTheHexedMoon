@@ -250,8 +250,8 @@ MonoBehaviour:
   los_w: 6
   los_h: 1.2
   health: 100
-  view_LoS: 0
-  view_patrol_area: 0
+  view_LoS: 1
+  view_patrol_area: 1
   dir: -1
 --- !u!50 &1909031876
 Rigidbody2D:

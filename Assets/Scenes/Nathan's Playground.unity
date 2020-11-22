@@ -416,10 +416,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1123099327, guid: 38cfe78edf8f12346b5b0bc46e7944fc, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1711285363499835613, guid: 38cfe78edf8f12346b5b0bc46e7944fc, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -467,14 +463,6 @@ PrefabInstance:
     - target: {fileID: 1711285363975250973, guid: 38cfe78edf8f12346b5b0bc46e7944fc, type: 3}
       propertyPath: m_Name
       value: Basic Bunny
-      objectReference: {fileID: 0}
-    - target: {fileID: 7615934951286247244, guid: 38cfe78edf8f12346b5b0bc46e7944fc, type: 3}
-      propertyPath: view_LoS
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7615934951286247244, guid: 38cfe78edf8f12346b5b0bc46e7944fc, type: 3}
-      propertyPath: view_patrol_area
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38cfe78edf8f12346b5b0bc46e7944fc, type: 3}
