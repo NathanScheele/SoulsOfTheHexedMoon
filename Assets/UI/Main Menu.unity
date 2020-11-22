@@ -279,6 +279,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9173438724050926747, guid: b951bb725261a7a4fb0d430a7b735e0b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9173438724050926747, guid: b951bb725261a7a4fb0d430a7b735e0b, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9173438724050926747, guid: b951bb725261a7a4fb0d430a7b735e0b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9173438724050926747, guid: b951bb725261a7a4fb0d430a7b735e0b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -102
+      objectReference: {fileID: 0}
+    - target: {fileID: 9173438724216940130, guid: b951bb725261a7a4fb0d430a7b735e0b, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9173438724216940130, guid: b951bb725261a7a4fb0d430a7b735e0b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9173438724216940130, guid: b951bb725261a7a4fb0d430a7b735e0b, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9173438724216940130, guid: b951bb725261a7a4fb0d430a7b735e0b, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9173438724216940130, guid: b951bb725261a7a4fb0d430a7b735e0b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 9173438724216940130, guid: b951bb725261a7a4fb0d430a7b735e0b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -45
+      objectReference: {fileID: 0}
     - target: {fileID: 9173438724415927771, guid: b951bb725261a7a4fb0d430a7b735e0b, type: 3}
       propertyPath: m_Name
       value: CanvasMainMenu
@@ -366,6 +406,14 @@ PrefabInstance:
     - target: {fileID: 9173438724415927775, guid: b951bb725261a7a4fb0d430a7b735e0b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9173438724548777835, guid: b951bb725261a7a4fb0d430a7b735e0b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9173438724614303666, guid: b951bb725261a7a4fb0d430a7b735e0b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b951bb725261a7a4fb0d430a7b735e0b, type: 3}
