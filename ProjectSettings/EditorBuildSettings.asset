@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 1
+    path: Assets/UI/Main Menu.unity
+    guid: 18674e40fccf2e14bb504100dc12cfd0
+  - enabled: 1
+    path: Assets/Scenes/Nathan's Playground.unity
+    guid: 09f68602cd279bb4d9d0906294ef4765
   - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/UI/Test Level.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
