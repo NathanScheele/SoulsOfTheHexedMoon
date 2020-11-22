@@ -80,7 +80,7 @@ public class PlayerMovement : MonoBehaviour
     void Jump()
     {
         //if user presses spacebar and only if player is grounded, player jumps
-        if (Input.GetKeyDown(KeyCode.Space) && OnGround && jTimeStart == false)
+        if (Input.GetKeyDown(KeyCode.Space) &&/* OnGround &&*/ jTimeStart == false)
         {
             anim.SetTrigger("Jump");
             rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
