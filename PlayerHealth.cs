@@ -23,7 +23,7 @@ public class PlayerHealth : MonoBehaviour
         if(curHealth == 0)
         {
             //player dead, stops movement
-            player.moving = false;
+            player.playing = false;
         }
     }
 
