@@ -5,8 +5,7 @@ using UnityEngine;
 public class HitBox : MonoBehaviour
 {
     GameObject parent;
-
-    Player player_script;
+    PlayerHealth player_script;
     Enemy enemy_script;
     bool isPlayer;
 
@@ -16,7 +15,7 @@ public class HitBox : MonoBehaviour
         parent = transform.parent.gameObject;
 
         if(parent.tag == "Player"){
-            player_script = gameObject.GetComponentInParent<Player>();
+            player_script = gameObject.GetComponentInParent<PlayerHealth>();
             isPlayer = true;
         }
         else{
@@ -33,13 +32,12 @@ public class HitBox : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other){
         if(isPlayer){   //Other must be Enemy
-            float outgoing_dmg = 0;
+            int outgoing_dmg = 10;
             other.gameObject.GetComponentInParent<Enemy>().takeDmg(outgoing_dmg);
         }
         else{   //Other must be player
-            Debug.Log("Enemy attacks!");
-            float outgoing_dmg = enemy_script.atk_dmg;
-            other.gameObject.GetComponentInParent<Player>().takeDmg(outgoing_dmg);
+            int outgoing_dmg = enemy_script.atk_dmg;
+            other.gameObject.GetComponentInParent<PlayerHealth>().takeDmg(outgoing_dmg);
         }
     }
 }
