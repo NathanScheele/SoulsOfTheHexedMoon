@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1123099327}
   - component: {fileID: 1123099326}
   - component: {fileID: 1123099328}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: HitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 888182867
+  m_SortingLayerID: -1605192633
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 7615934951286247244}
   - component: {fileID: 1909031876}
   - component: {fileID: 111677217}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: Basic Bunny
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -152,7 +152,7 @@ Transform:
   m_GameObject: {fileID: 1711285363975250973}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.043, y: 0.005, z: -0.77993}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children:
   - {fileID: 7281749246762394322}
   - {fileID: 1123099325}
@@ -197,7 +197,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 888182867
+  m_SortingLayerID: -1605192633
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -6320621843993570819, guid: 2f1ce0680cdc6174694ca41bc697e98c, type: 3}
@@ -242,15 +242,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28ede38f971cc6742b625f463b970851, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  l_patrol_dist: 5
-  r_patrol_dist: 5
+  l_patrol_dist: 2
+  r_patrol_dist: 2
   speed: 2
-  atk_dmg: 10
   atk_range: 1.3
   los_w: 6
   los_h: 1.2
   health: 100
-  view_LoS: 1
+  atk_dmg: 10
+  view_LoS: 0
   view_patrol_area: 1
   dir: -1
 --- !u!50 &1909031876
@@ -265,7 +265,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 0.1325
+  m_Mass: 0.29812497
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -318,7 +318,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2366734544704351712}
   - component: {fileID: 8723186955992926578}
-  m_Layer: 12
+  m_Layer: 9
   m_Name: HurtBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -377,7 +377,7 @@ GameObject:
   - component: {fileID: 7505638613378721951}
   - component: {fileID: 3189008565521645540}
   - component: {fileID: 1995302267}
-  m_Layer: 10
+  m_Layer: 12
   m_Name: LineOfSight
   m_TagString: Untagged
   m_Icon: {fileID: 0}

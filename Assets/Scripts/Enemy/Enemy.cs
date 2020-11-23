@@ -11,7 +11,8 @@ public class Enemy: MonoBehaviour
 
 
     // Public variables used to make different enemy types 
-    public float l_patrol_dist, r_patrol_dist, speed, atk_dmg, atk_range, los_w, los_h, health;
+    public float l_patrol_dist, r_patrol_dist, speed, atk_range, los_w, los_h, health;
+    public int atk_dmg;
     public bool view_LoS, view_patrol_area;
     public float dir;
 
