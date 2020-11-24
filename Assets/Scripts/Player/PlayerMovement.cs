@@ -125,7 +125,7 @@ public class PlayerMovement : MonoBehaviour
             startAttackTime = true;
         }
         
-        if (Input.GetKeyDown(KeyCode.L) && timeSinceAttack == 0 &&  OnGround)
+        if (Input.GetKeyDown(KeyCode.L) && timeSinceAttack == 0/* &&  OnGround*/)
         {
             //Stops player movement for 1.5f 
             anim.SetTrigger("Howl");
