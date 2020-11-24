@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 523289648}
   m_Layer: 8
   m_Name: HitBox
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,7 +82,7 @@ GameObject:
   - component: {fileID: 2061399791}
   m_Layer: 9
   m_Name: HurtBox
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -141,6 +141,7 @@ GameObject:
   - component: {fileID: 5443212665515861698}
   - component: {fileID: 5443212665515861311}
   - component: {fileID: 1661076867}
+  - component: {fileID: 343416789}
   m_Layer: 10
   m_Name: Ulric
   m_TagString: Player
@@ -230,7 +231,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 6200000, guid: 76b4203e9464bd64396eb7976513972d, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -248,8 +249,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb313bc6397636044baf4a065ff532e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
-  jumpSpeed: 8
+  speed: 6
+  jumpSpeed: 14
   jumpTime: 1
   timeSinceAttack: 0
   playing: 0
@@ -289,3 +290,42 @@ MonoBehaviour:
   maxHealth: 100
   healthBar: {fileID: 0}
   player: {fileID: 5443212665515861698}
+--- !u!60 &343416789
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5443212665515861696}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.23333333, y: 0.13333334}
+    newSize: {x: 1.28, y: 1.28}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.09361049, y: 0.0050718635}
+      - {x: 0.10333334, y: 0.023333333}
+      - {x: 0.09334757, y: 0.023801053}
+      - {x: 0.0715494, y: 0.03525217}
+      - {x: 0.057149976, y: 0.05441251}
+      - {x: 0.027107365, y: 0.024880229}
+      - {x: -0.047953058, y: 0.014784437}
+      - {x: -0.09847908, y: -0.036810376}
+      - {x: -0.10666667, y: -0.05666667}
+      - {x: -0.08439943, y: -0.054316707}
+      - {x: -0.06515988, y: -0.06666667}
+      - {x: 0.06333333, y: -0.06666667}
+      - {x: 0.06333333, y: -0.060000002}
+      - {x: 0.052046943, y: -0.02591152}

@@ -17,8 +17,6 @@ public class LineOfSight : MonoBehaviour
 
         enemy_script = gameObject.GetComponentInParent<Enemy>();
 
-        transform.localScale = new Vector3(depth, height, transform.localScale.z);
-
         m_animator = gameObject.GetComponentInParent<Animator>();
     }
 
@@ -29,14 +27,25 @@ public class LineOfSight : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D collider){
+        
         if(collider.gameObject.tag == "Player"){
-            m_animator.SetBool("isFollowing", true);
+            if(transform.parent.name.Contains("Ranged Rabbit")){ 
+                m_animator.SetBool("isAttacking", true);
+            }
+            else{//Basic Bunny Behaviour
+                m_animator.SetBool("isFollowing", true);
+            }
         }
     }
 
     void OnTriggerExit2D(Collider2D collider){
         if(collider.gameObject.tag == "Player"){
-            m_animator.SetBool("isFollowing", false);
+            if(transform.parent.name.Contains("Ranged Rabbit")){ 
+                m_animator.SetBool("isAttacking", false);
+            }
+            else{//Basic Bunny Behaviour
+                m_animator.SetBool("isFollowing", false);
+            }
         }
     }
 
@@ -48,8 +57,8 @@ public class LineOfSight : MonoBehaviour
 
         if(enemy_script.view_LoS){
             Gizmos.color = Color.green;
-            Vector2 top = new Vector2(transform.TransformDirection(enemy_script.dir * transform.right).x * depth, 0.5f * height);
-            Vector2 bottom = new Vector2(transform.TransformDirection(enemy_script.dir * transform.right).x * depth, -0.5f * height);
+            Vector2 top = new Vector2(transform.TransformDirection(enemy_script.dir * transform.right).x * 2 * depth, height);
+            Vector2 bottom = new Vector2(transform.TransformDirection(enemy_script.dir * transform.right).x * 2 * depth, -height);
             Gizmos.DrawRay(transform.position, top);
             Gizmos.DrawRay(transform.position, bottom);
         }

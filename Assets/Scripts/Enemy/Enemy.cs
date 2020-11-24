@@ -6,15 +6,17 @@ public class Enemy: MonoBehaviour
 {
     // Location of this Enemy's spawn point (used to determine patrol route)
     Vector2 spawn;
+    
     Rigidbody2D m_rigidbody;
     Animator m_animator;
 
 
     // Public variables used to make different enemy types 
-    public float l_patrol_dist, r_patrol_dist, speed, atk_range, los_w, los_h, health;
+    public float l_patrol_dist, r_patrol_dist, speed, atk_range, health;
     public int atk_dmg;
     public bool view_LoS, view_patrol_area;
     public float dir;
+    public Rigidbody2D carrot, heart;
 
     float last_dmg;
     
@@ -35,6 +37,12 @@ public class Enemy: MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void RangedAttack(){
+        Rigidbody2D carrot_clone = (Rigidbody2D) Instantiate(carrot, transform.position, transform.rotation);
+         
+        carrot_clone.velocity = dir * transform.right * 5f;
     }
 
     public Vector2 getSpawn(){
@@ -92,6 +100,8 @@ public class Enemy: MonoBehaviour
         //TODO
         //Actually spawn item
         Debug.Log("Bloody Heart dropped");
+
+        Instantiate(heart);
 
         Destroy(gameObject);
     }
