@@ -7,6 +7,8 @@ public class AttackBehaviour : StateMachineBehaviour
     GameHandler game_handler_script;
     Vector2 player_pos;
     Enemy enemy_script;
+
+    Rigidbody2D m_rigidbody;
     
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -15,6 +17,10 @@ public class AttackBehaviour : StateMachineBehaviour
         player_pos = game_handler_script.getPlayerPos();
 
         enemy_script = animator.gameObject.GetComponent<Enemy>();
+
+        m_rigidbody = animator.gameObject.GetComponent<Rigidbody2D>();
+
+        m_rigidbody.velocity = new Vector2(0,0);
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
