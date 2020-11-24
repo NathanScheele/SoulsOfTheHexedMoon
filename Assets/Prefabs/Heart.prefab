@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 5234474821861851768}
   - component: {fileID: 5234474821861851769}
   - component: {fileID: 5234474821861851770}
-  - component: {fileID: 5234474821861851771}
-  m_Layer: 10
+  - component: {fileID: -7496108351201720037}
+  m_Layer: 15
   m_Name: Heart
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5234474821861851774}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
+  m_LocalPosition: {x: -0.007, y: -0.016, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1596697535
-  m_SortingLayer: 3
+  m_SortingLayerID: -1605192633
+  m_SortingLayer: 1
   m_SortingOrder: 20
   m_Sprite: {fileID: 21300000, guid: 1a8422a05851b734480046cf589dd9ac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -105,8 +105,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &5234474821861851771
-PolygonCollider2D:
+--- !u!58 &-7496108351201720037
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -114,32 +114,10 @@ PolygonCollider2D:
   m_GameObject: {fileID: 5234474821861851774}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 7a65a5fa44c89e04c9cbde0759610350, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
-    newSize: {x: 0.32, y: 0.32}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.04738566, y: 0.10698594}
-      - {x: -0.030539004, y: 0.12674642}
-      - {x: -0.076071806, y: 0.11525315}
-      - {x: -0.08367203, y: 0.10307398}
-      - {x: -0.10023951, y: 0.07193171}
-      - {x: -0.10023973, y: 0.069341324}
-      - {x: -0.047117468, y: -0.046287816}
-      - {x: -0.010299269, y: -0.085089795}
-      - {x: -0.006327972, y: -0.085089795}
-      - {x: -0.0077444464, y: -0.08171644}
-      - {x: -0.007565059, y: -0.08295411}
-      - {x: 0.023911763, y: -0.052115932}
-      - {x: 0.09834299, y: 0.053971898}
+  m_Offset: {x: 0, y: 0.03419008}
+  serializedVersion: 2
+  m_Radius: 0.118212156
