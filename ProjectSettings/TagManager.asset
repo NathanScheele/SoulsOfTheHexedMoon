@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Ground
   - Enemy
+  - PowerUp
+  - Green
+  - Blue
   layers:
   - Default
   - TransparentFX
@@ -48,4 +51,7 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 3270110839
+    locked: 0
+  - name: Heart
+    uniqueID: 1596697535
     locked: 0

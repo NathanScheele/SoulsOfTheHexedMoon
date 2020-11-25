@@ -31,11 +31,13 @@ public class HitBox : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other){
-        if(isPlayer){   //Other must be Enemy
+
+        if(isPlayer && other.gameObject.tag == "Enemy"){   //Other must be Enemy
             int outgoing_dmg = 10;
+
             other.gameObject.GetComponentInParent<Enemy>().takeDmg(outgoing_dmg);
         }
-        else{   //Other must be player
+        else if (!isPlayer && other.gameObject.tag == "Player"){   //Other must be player
             int outgoing_dmg = enemy_script.atk_dmg;
             other.gameObject.GetComponentInParent<PlayerHealth>().takeDmg(outgoing_dmg);
         }

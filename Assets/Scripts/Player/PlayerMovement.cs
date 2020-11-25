@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public GameObject text, moreText;
+    //public GameObject text, moreText;
     public float speed;
     public float jumpSpeed = 8;
     public float jumpTime = 1f;
-    public float timeSinceAttack = 1.5f;
+    public float timeSinceAttack = .5f;
 
     public bool playing;
     public bool moving;
@@ -84,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
         {
             anim.SetTrigger("Jump");
             rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
-            text.SetActive(false); // disables text
+            //text.SetActive(false); // disables text
             jTimeStart = true; // start next jump time
         }
 
@@ -106,7 +106,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("Attack1");
             anim.SetTrigger("Bite");
-            timeSinceAttack = 1.5f;
+            timeSinceAttack = .5f;
             startAttackTime = true;
 
         }
@@ -121,18 +121,18 @@ public class PlayerMovement : MonoBehaviour
         {
             anim.SetTrigger("Scratch");
             Debug.Log("Attack2");
-            timeSinceAttack = 1.5f;
+            timeSinceAttack = .5f;
             startAttackTime = true;
         }
         
-        if (Input.GetKeyDown(KeyCode.L) && timeSinceAttack == 0 &&  OnGround)
+        if (Input.GetKeyDown(KeyCode.L) && timeSinceAttack == 0/* &&  OnGround*/)
         {
             //Stops player movement for 1.5f 
             anim.SetTrigger("Howl");
             moving = false;
-            moreText.SetActive(false);
+            //moreText.SetActive(false);
             Debug.Log("ULTIMATE HOWL!");
-            timeSinceAttack = 1.5f;
+            timeSinceAttack = .5f;
             startAttackTime = true;
         }
 
