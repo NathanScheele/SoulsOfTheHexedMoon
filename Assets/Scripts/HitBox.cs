@@ -6,7 +6,7 @@ public class HitBox : MonoBehaviour
 {
     GameObject parent;
     PlayerHealth player_script;
-    Enemy enemy_script;
+    EnemyStats enemy_script;
     bool isPlayer;
 
     // Start is called before the first frame update
@@ -19,7 +19,7 @@ public class HitBox : MonoBehaviour
             isPlayer = true;
         }
         else{
-            enemy_script = gameObject.GetComponentInParent<Enemy>();
+            enemy_script = gameObject.GetComponentInParent<EnemyStats>();
             isPlayer = false;
         }
     }
@@ -35,11 +35,11 @@ public class HitBox : MonoBehaviour
         if(isPlayer && other.gameObject.tag == "Enemy"){   //Other must be Enemy
             int outgoing_dmg = 10;
 
-            other.gameObject.GetComponentInParent<Enemy>().takeDmg(outgoing_dmg);
+            Debug.Log("Here");
+            other.gameObject.GetComponentInParent<EnemyStats>().takeDmg(outgoing_dmg);
         }
         else if (!isPlayer && other.gameObject.tag == "Player"){   //Other must be player
-            int outgoing_dmg = enemy_script.atk_dmg;
-            other.gameObject.GetComponentInParent<PlayerHealth>().takeDmg(outgoing_dmg);
+            other.gameObject.GetComponentInParent<PlayerHealth>().takeDmg((int)enemy_script.atk_dmg);
         }
     }
 }

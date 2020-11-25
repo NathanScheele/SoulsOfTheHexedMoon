@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
     {
         float hMove = Input.GetAxis("Horizontal");
         if(hMove > 0)
-        {
+        {   
             anim.SetBool("Run", true);
             facingRight = true;
         }
