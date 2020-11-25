@@ -11,6 +11,12 @@ public class SpeedPowerUp : MonoBehaviour
     {
         increase = 2f;
     }
+    
+    void Update()
+    {
+        // Spin the object around the target at 20 degrees/second.
+        transform.RotateAround(gameObject.transform.position, Vector3.forward, 40 * Time.deltaTime);
+    }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
@@ -33,7 +39,6 @@ public class SpeedPowerUp : MonoBehaviour
 
     IEnumerator PowerUpCountdownRoutine()
     {
-        Debug.Log("Powerupcountdown");
         yield return new WaitForSeconds(5);
         playerScript.speed /= increase;
         Destroy(gameObject);
