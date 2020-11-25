@@ -5,11 +5,14 @@ using UnityEngine;
 public class SpeedPowerUp : MonoBehaviour
 {
     public float increase;
+    public float duration;
+
     PlayerMovement playerScript;
 
     void Start()
     {
         increase = 2f;
+        duration = 5;
     }
     
     void Update()
@@ -20,18 +23,19 @@ public class SpeedPowerUp : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Player")
+        if (collision.tag == "Player")
         {
             GameObject player = collision.gameObject;
             playerScript = player.GetComponent<PlayerMovement>();
 
-            if(playerScript)
+            if (playerScript)
             {
                 playerScript.speed *= increase;
                 SpriteRenderer sprender = gameObject.GetComponent<SpriteRenderer>();
                 CircleCollider2D coll = gameObject.GetComponent<CircleCollider2D>();
                 sprender.enabled = false;
                 coll.enabled = false;
+                active = true;
                 StartCoroutine(PowerUpCountdownRoutine());
             }
         }
@@ -39,7 +43,7 @@ public class SpeedPowerUp : MonoBehaviour
 
     IEnumerator PowerUpCountdownRoutine()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(duration);
         playerScript.speed /= increase;
         Destroy(gameObject);
     }

@@ -5,11 +5,13 @@ using UnityEngine;
 public class JumpPowerUp : MonoBehaviour
 {
     public float increase;
+    public float duration;
     PlayerMovement playerScript;
 
     void Start()
     {
         increase = 1.5f;
+        duration = 5;
     }
     void Update()
     {
@@ -38,7 +40,7 @@ public class JumpPowerUp : MonoBehaviour
 
     IEnumerator PowerUpCountdownRoutine()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(duration);
         playerScript.jumpSpeed /= increase;
         Destroy(gameObject);
     }
