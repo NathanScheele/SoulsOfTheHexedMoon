@@ -35,7 +35,6 @@ public class SpeedPowerUp : MonoBehaviour
                 CircleCollider2D coll = gameObject.GetComponent<CircleCollider2D>();
                 sprender.enabled = false;
                 coll.enabled = false;
-                active = true;
                 StartCoroutine(PowerUpCountdownRoutine());
             }
         }
