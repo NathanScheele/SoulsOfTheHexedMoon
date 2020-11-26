@@ -18,6 +18,7 @@ public class PlayerHealth : MonoBehaviour
         curHealth = maxHealth;
 
         last_dmg = 0;
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     // Update is called once per frame
@@ -28,6 +29,7 @@ public class PlayerHealth : MonoBehaviour
         {
             //player dead, stops movement
             player.playing = false;
+            FindObjectOfType<GameManager>().EndGame();
         }
     }
     public void takeDmg(int incoming_dmg){
@@ -35,7 +37,7 @@ public class PlayerHealth : MonoBehaviour
 
         if(elapsed_time > 1){
             curHealth = Mathf.Max(0, curHealth - incoming_dmg);
-            //healthBar.SetHealth(curHealth);
+            healthBar.SetHealth(curHealth);
         }
     }   
 }
