@@ -15,7 +15,10 @@ public class Enemy: MonoBehaviour
     public int atk_dmg;
     public bool view_LoS, view_patrol_area;
     public float dir;
-
+    //Blood particle effect
+    public GameObject effect;
+    //Heart drop
+    public GameObject heart;
     float last_dmg;
     
     // Start is called before the first frame update
@@ -89,10 +92,9 @@ public class Enemy: MonoBehaviour
     }
 
     public void die(){
-        //TODO
-        //Actually spawn item
-        Debug.Log("Bloody Heart dropped");
-
+        //Spawns particles and heart on bunny death
+        Instantiate(heart, transform.position, Quaternion.identity);
+        Instantiate(effect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }
