@@ -27,14 +27,13 @@ public class AttackBehaviour : StateMachineBehaviour
         player_pos = game_handler_script.getPlayerPos();
         float distance_to_player = Vector2.Distance(animator.transform.position, player_pos);
 
+        enemy_script.TurnTowards(player_pos);
+        
         // Check for state changes
         if(distance_to_player >= enemy_script.atk_range){ // Start following
             animator.SetBool("isAttacking", false);
         }
     }
-    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-       
-    }
+
 
 }

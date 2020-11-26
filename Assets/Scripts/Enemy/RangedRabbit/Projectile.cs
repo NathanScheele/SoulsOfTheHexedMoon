@@ -16,11 +16,11 @@ public class Projectile : MonoBehaviour
         
     }
 
-    void OnCollisionEnter2D(Collision2D other){
+    void OnTriggerEnter2D(Collider2D other){
         if(other.gameObject.tag == "Player"){
             other.gameObject.GetComponent<PlayerHealth>().takeDmg(10);
             
-            Destroy(gameObject,1);
+            Destroy(gameObject);
         }
     }
 }

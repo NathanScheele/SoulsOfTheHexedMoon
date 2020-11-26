@@ -133,9 +133,9 @@ GameObject:
   - component: {fileID: 1711285363499835613}
   - component: {fileID: 1711285363975250975}
   - component: {fileID: 1711285363975250974}
-  - component: {fileID: 7615934951286247244}
   - component: {fileID: 1909031876}
   - component: {fileID: 111677217}
+  - component: {fileID: 1212103200}
   m_Layer: 11
   m_Name: Basic Bunny
   m_TagString: Enemy
@@ -229,29 +229,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7615934951286247244
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1711285363975250973}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28ede38f971cc6742b625f463b970851, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  l_patrol_dist: 2
-  r_patrol_dist: 2
-  speed: 2
-  atk_range: 1.3
-  health: 20
-  atk_spd: 0
-  atk_dmg: 5
-  view_patrol_area: 1
-  dir: -1
-  carrot: {fileID: 0}
-  heart: {fileID: 5234474821861851774, guid: e78ae981f20fcd1418c51d2dcb98dd22, type: 3}
 --- !u!50 &1909031876
 Rigidbody2D:
   serializedVersion: 4
@@ -307,6 +284,28 @@ PolygonCollider2D:
       - {x: 0.185, y: -0.13499999}
       - {x: 0.185, y: 0.085}
       - {x: 0.125, y: 0.195}
+--- !u!114 &1212103200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1711285363975250973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b67b21de2a8329419eca7cbdd770371, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  atk_range: 1.3
+  pursuit_range: 6
+  atk_dmg: 5
+  atk_spd: 0
+  health: 20
+  heart: {fileID: 5234474821861851770, guid: e78ae981f20fcd1418c51d2dcb98dd22, type: 3}
+  l_patrol_dist: 2
+  r_patrol_dist: 2
+  speed: 2
+  view_patrol_area: 1
 --- !u!1 &1787619718844243210
 GameObject:
   m_ObjectHideFlags: 0

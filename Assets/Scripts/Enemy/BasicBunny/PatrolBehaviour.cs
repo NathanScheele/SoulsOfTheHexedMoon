@@ -29,7 +29,7 @@ public class PatrolBehaviour : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {   
         float distance_to_player = Vector2.Distance(animator.transform.position, game_handler_script.getPlayerPos());
-        if(distance_to_player <= 6){
+        if(distance_to_player <= enemy_script.pursuit_range){
             animator.SetBool("isFollowing", true);
         }
         //Patrol

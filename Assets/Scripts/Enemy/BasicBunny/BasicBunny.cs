@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BasicBunny: EnemyStats
+public class BasicBunny: Enemy
 {
     
     // Public variables used to make different enemy types 
@@ -11,16 +11,8 @@ public class BasicBunny: EnemyStats
 
     public void MoveTowards(Vector2 target){
 
-        //Make sure you're facing the target
-        if(target.x < transform.position.x && dir == 1){
-            transform.Rotate(new Vector3(0,180,0));
-            dir *= -1;
-        }
-        else if(target.x > transform.position.x && dir == -1){
-            transform.Rotate(new Vector3(0,180,0));
-            dir *= -1;
-        }
-
+        TurnTowards(target);
+        
         Vector2 direction = new Vector2(target.x - transform.position.x, 0).normalized;
         m_rigidbody.velocity = new Vector2(direction.x * speed, m_rigidbody.velocity.y);
     }

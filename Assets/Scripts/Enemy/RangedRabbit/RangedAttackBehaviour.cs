@@ -5,15 +5,13 @@ using UnityEngine;
 public class RangedAttackBehaviour : StateMachineBehaviour
 {   
     GameHandler game_handler_script;
-    Enemy enemy_script;
-    Vector2 player_pos;
-
-    float last_atk = 0;
+    RangedRabbit enemy_script;
+    Vector3 player_pos;
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         game_handler_script = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameHandler>();
 
-        enemy_script = animator.GetComponent<Enemy>();
+        enemy_script = animator.GetComponent<RangedRabbit>();
 
         player_pos = game_handler_script.getPlayerPos();
     }
@@ -22,22 +20,14 @@ public class RangedAttackBehaviour : StateMachineBehaviour
     {
         player_pos = game_handler_script.getPlayerPos();
 
-        //Just turns around :)
-        enemy_script.MoveTowards(player_pos); 
+        float distance_to_player = Vector2.Distance(player_pos, animator.transform.position);
 
-        float elapsed_time = Time.time - last_atk;
-
-        if(elapsed_time > 1f){
-            enemy_script.RangedAttack();
-            last_atk = Time.time;
+        enemy_script.TurnTowards(player_pos);
+        
+        if(distance_to_player > enemy_script.pursuit_range){
+            animator.SetBool("isAttacking", false);
         }
-
+        
     }
-
-    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-       
-    }
-
     
 }
