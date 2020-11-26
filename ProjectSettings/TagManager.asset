@@ -10,6 +10,7 @@ TagManager:
   - Green
   - Blue
   - Blood
+  - Heart
   layers:
   - Default
   - TransparentFX
