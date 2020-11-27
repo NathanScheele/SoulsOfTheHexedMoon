@@ -23,13 +23,6 @@ public class HitBox : MonoBehaviour
             isPlayer = false;
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void OnTriggerEnter2D(Collider2D other){
 
         if(isPlayer && other.gameObject.tag == "Enemy"){   //Other must be Enemy
@@ -38,8 +31,7 @@ public class HitBox : MonoBehaviour
             other.gameObject.GetComponentInParent<Enemy>().takeDmg(outgoing_dmg);
         }
         else if (!isPlayer && other.gameObject.tag == "Player"){   //Other must be player
-            int outgoing_dmg = enemy_script.atk_dmg;
-            other.gameObject.GetComponentInParent<PlayerHealth>().takeDmg(outgoing_dmg);
+            other.gameObject.GetComponentInParent<PlayerHealth>().takeDmg((int)enemy_script.atk_dmg);
         }
     }
 }

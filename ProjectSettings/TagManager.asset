@@ -13,6 +13,7 @@ TagManager:
   - Existance
   - Life
   - Moon
+  - Heart
   layers:
   - Default
   - TransparentFX
@@ -30,6 +31,8 @@ TagManager:
   - Ground
   - Pick
   - 
+  - Carrot
+  - Heart
   - 
   - 
   - 
@@ -47,6 +50,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Parallax
+    uniqueID: 623677967
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
@@ -55,7 +61,4 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 3270110839
-    locked: 0
-  - name: Heart
-    uniqueID: 1596697535
     locked: 0

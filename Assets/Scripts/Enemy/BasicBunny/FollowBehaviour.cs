@@ -5,13 +5,13 @@ using UnityEngine;
 public class FollowBehaviour : StateMachineBehaviour
 {
     GameHandler game_handler_script;
-    Enemy enemy_script;
+    BasicBunny enemy_script;
     Vector2 player_pos;
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         game_handler_script = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameHandler>();
 
-        enemy_script = animator.GetComponent<Enemy>();
+        enemy_script = animator.GetComponent<BasicBunny>();
 
         player_pos = game_handler_script.getPlayerPos();
     }
@@ -24,6 +24,9 @@ public class FollowBehaviour : StateMachineBehaviour
         // Check for state changes
         if(distance_to_player <= enemy_script.atk_range){ // Attack!
             animator.SetBool("isAttacking", true);
+        }
+        else if(distance_to_player > 6){
+            animator.SetBool("isFollowing", false);
         }
         else{ // Continue following
                 enemy_script.MoveTowards(player_pos);

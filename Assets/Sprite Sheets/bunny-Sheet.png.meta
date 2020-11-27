@@ -64,13 +64,13 @@ TextureImporter:
     second: bunny-stand_2
   - first:
       213: -2259908227173389601
-    second: bunny-stand_3
+    second: bunny-ranged_2
   - first:
       213: 2995684566218785404
-    second: bunny-stand_4
+    second: bunny-ranged_1
   - first:
       213: 6592315450395694517
-    second: bunny-stand_5
+    second: bunny-ranged_0
   - first:
       213: -4391097990870499060
     second: bunny-Sheet_0
@@ -590,7 +590,7 @@ TextureImporter:
       name: bunny-stand_0
       rect:
         serializedVersion: 2
-        x: 70
+        x: 71
         y: 80
         width: 33
         height: 54
@@ -650,7 +650,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bunny-stand_3
+      name: bunny-ranged_2
       rect:
         serializedVersion: 2
         x: 23
@@ -671,7 +671,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bunny-stand_4
+      name: bunny-ranged_1
       rect:
         serializedVersion: 2
         x: 76
@@ -692,10 +692,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bunny-stand_5
+      name: bunny-ranged_0
       rect:
         serializedVersion: 2
-        x: 133
+        x: 132
         y: 6
         width: 25
         height: 65

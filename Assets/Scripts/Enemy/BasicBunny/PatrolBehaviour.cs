@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class PatrolBehaviour : StateMachineBehaviour
 {
-    Enemy enemy_script;
+    BasicBunny enemy_script;
     Vector2 spawn;
-    float patrol_radius, speed;
+    float speed;
     Vector2[] waypoints;
     int currWaypoint;
+    GameHandler game_handler_script;
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        enemy_script = animator.gameObject.GetComponent<Enemy>();
+        enemy_script = animator.gameObject.GetComponent<BasicBunny>();
 
         spawn = enemy_script.getSpawn();
 
@@ -21,14 +22,18 @@ public class PatrolBehaviour : StateMachineBehaviour
         waypoints = new Vector2[] {new Vector2(spawn.x - enemy_script.l_patrol_dist, 1000f), new Vector2(spawn.x + enemy_script.l_patrol_dist, 1000f)};
 
         currWaypoint = 0;
+
+        game_handler_script = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameHandler>();
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {   
-        //IMPORTANT: Transition to Follow State is updated by the Enemy's LineOfSight Component
-
+        float distance_to_player = Vector2.Distance(animator.transform.position, game_handler_script.getPlayerPos());
+        if(distance_to_player <= enemy_script.pursuit_range){
+            animator.SetBool("isFollowing", true);
+        }
         //Patrol
-        if(Mathf.Abs(animator.transform.position.x - waypoints[currWaypoint].x) >= 0.2f){ // Continue to waypoint
+        else if(Mathf.Abs(animator.transform.position.x - waypoints[currWaypoint].x) >= 0.2f){ // Continue to waypoint
             enemy_script.MoveTowards(waypoints[currWaypoint]);
         }
         else{//Acquire new waypoint
