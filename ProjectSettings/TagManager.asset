@@ -9,6 +9,10 @@ TagManager:
   - PowerUp
   - Green
   - Blue
+  - Purpose
+  - Existance
+  - Life
+  - Moon
   layers:
   - Default
   - TransparentFX
@@ -24,7 +28,7 @@ TagManager:
   - Enemy
   - LineOfSight
   - Ground
-  - 
+  - Pick
   - 
   - 
   - 

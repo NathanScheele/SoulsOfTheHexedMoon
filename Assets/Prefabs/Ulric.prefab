@@ -141,6 +141,7 @@ GameObject:
   - component: {fileID: 5443212665515861698}
   - component: {fileID: 5443212665515861311}
   - component: {fileID: 1661076867}
+  - component: {fileID: 5134057364990998410}
   m_Layer: 10
   m_Name: Ulric
   m_TagString: Player
@@ -289,3 +290,21 @@ MonoBehaviour:
   maxHealth: 100
   healthBar: {fileID: 0}
   player: {fileID: 5443212665515861698}
+--- !u!114 &5134057364990998410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5443212665515861696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e86052d0f8b756246a3edc6b032e5fe8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFull: 00
+  slots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
