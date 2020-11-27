@@ -1,0 +1,826 @@
+fileFormatVersion: 2
+guid: 8ba831a6d4c639344a99a0bb51b778b9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6747039296091858782
+    second: bunny-Sheet 1_0
+  - first:
+      213: 6778665752915276817
+    second: bunny-Sheet 1_1
+  - first:
+      213: -4968363714688784619
+    second: bunny-Sheet 1_2
+  - first:
+      213: -6045569595407888315
+    second: bunny-Sheet 1_3
+  - first:
+      213: -404439279582495970
+    second: bunny-Sheet 1_4
+  - first:
+      213: -563280910962608490
+    second: bunny-Sheet 1_5
+  - first:
+      213: -7452634377766258977
+    second: bunny-Sheet 1_6
+  - first:
+      213: 1880242952936689977
+    second: bunny-Sheet 1_7
+  - first:
+      213: 4176304650562982188
+    second: bunny-walk-2
+  - first:
+      213: 5402890488594242774
+    second: bunny-walk-3
+  - first:
+      213: -5981793977561039066
+    second: bunny-walk-4
+  - first:
+      213: -4030244701781808186
+    second: bunny-walk-5
+  - first:
+      213: -2012168195010474623
+    second: bunny-walk-0
+  - first:
+      213: 6691623052545113710
+    second: bunny-walk-1
+  - first:
+      213: 6779011856362434301
+    second: bunny-Sheet 1_14
+  - first:
+      213: 605215126648797453
+    second: bunny-Sheet 1_15
+  - first:
+      213: -2041686233231501304
+    second: bunny-Sheet 1_16
+  - first:
+      213: -6993879456154806823
+    second: bunny-Sheet 1_17
+  - first:
+      213: 593247260979764436
+    second: bunny-Sheet 1_18
+  - first:
+      213: -2594145647510007966
+    second: bunny-Sheet 1_19
+  - first:
+      213: 8735994010289799315
+    second: bunny-Sheet 1_20
+  - first:
+      213: 3934119637284902433
+    second: bunny-Sheet 1_21
+  - first:
+      213: -3677576392916019094
+    second: bunny-Sheet 1_22
+  - first:
+      213: -9019029217656099238
+    second: bunny-Sheet 1_23
+  - first:
+      213: -8465517233707582253
+    second: bunny-Sheet 1_24
+  - first:
+      213: -963230823108664048
+    second: bunny-ranged-2
+  - first:
+      213: 8258461165506951924
+    second: bunny-ranged-1
+  - first:
+      213: 1924621369988874569
+    second: bunny-ranged-0
+  - first:
+      213: -7183844906346892621
+    second: bunny-Sheet 1_28
+  - first:
+      213: -5510556777796808442
+    second: bunny-Sheet 1_29
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bunny-Sheet 1_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 450
+        width: 33
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5728211e7c42ad50800000000000000
+      internalID: 6747039296091858782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny-Sheet 1_1
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 450
+        width: 33
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 114fe9d5698a21e50800000000000000
+      internalID: 6778665752915276817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny-Sheet 1_2
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 450
+        width: 33
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 517e8076683dc0bb0800000000000000
+      internalID: -4968363714688784619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny-Sheet 1_3
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 450
+        width: 35
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5409fc8db72d91ca0800000000000000
+      internalID: -6045569595407888315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny-Sheet 1_4
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 376
+        width: 36
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1b35473e94236af0800000000000000
+      internalID: -404439279582495970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny-Sheet 1_5
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 373
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 696b051fef2de28f0800000000000000
+      internalID: -563280910962608490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny-Sheet 1_6
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 373
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd6b068e48ce29890800000000000000
+      internalID: -7452634377766258977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny-Sheet 1_7
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 374
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9311935f007f71a10800000000000000
+      internalID: 1880242952936689977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny-walk-2
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 299
+        width: 42
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c215e92e3f635f930800000000000000
+      internalID: 4176304650562982188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny-walk-3
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 299
+        width: 46
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dc1ffc064ceafa40800000000000000
+      internalID: 5402890488594242774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny-walk-4
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 296
+        width: 35
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62f37eff1166cfca0800000000000000
+      internalID: -5981793977561039066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny-walk-5
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 297
+        width: 36
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cb25600cc1b118c0800000000000000
+      internalID: -4030244701781808186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny-walk-0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 223
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18dcf0400b75314e0800000000000000
+      internalID: -2012168195010474623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny-walk-1
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 223
+        width: 42
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6e34c966bb6ddc50800000000000000
+      internalID: 6691623052545113710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny-Sheet 1_14
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 225
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfee4aadd53e31e50800000000000000
+      internalID: 6779011856362434301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny-Sheet 1_15
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 225
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d09389c73f7266800800000000000000
+      internalID: 605215126648797453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny-Sheet 1_16
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 151
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8085e6d20397aa3e0800000000000000
+      internalID: -2041686233231501304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny-Sheet 1_17
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 154
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d59df590bfb0fe90800000000000000
+      internalID: -6993879456154806823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny-Sheet 1_18
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 154
+        width: 31
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dc1cae9d33ab3800800000000000000
+      internalID: 593247260979764436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny-Sheet 1_19
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 154
+        width: 29
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26f4a88274ebffbd0800000000000000
+      internalID: -2594145647510007966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny-Sheet 1_20
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 80
+        width: 25
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 390834f544c7c3970800000000000000
+      internalID: 8735994010289799315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny-Sheet 1_21
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 80
+        width: 25
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 126514c57fcc89630800000000000000
+      internalID: 3934119637284902433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny-Sheet 1_22
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 80
+        width: 25
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a68d0e951cf96fcc0800000000000000
+      internalID: -3677576392916019094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny-Sheet 1_23
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 90
+        width: 12
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5e2dbe16b8f5d280800000000000000
+      internalID: -9019029217656099238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny-Sheet 1_24
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 81
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dc79ec9de0748a80800000000000000
+      internalID: -8465517233707582253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny-ranged-2
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 6
+        width: 25
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 015a6e77baae1a2f0800000000000000
+      internalID: -963230823108664048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny-ranged-1
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 6
+        width: 25
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fa7661cca2fb9270800000000000000
+      internalID: 8258461165506951924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny-ranged-0
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 6
+        width: 25
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 941005d50f0a5ba10800000000000000
+      internalID: 1924621369988874569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny-Sheet 1_28
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 16
+        width: 12
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b2b1bb8e1bdd4c90800000000000000
+      internalID: -7183844906346892621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny-Sheet 1_29
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 7
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 601dcc88ec19683b0800000000000000
+      internalID: -5510556777796808442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
