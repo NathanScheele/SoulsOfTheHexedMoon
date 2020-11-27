@@ -4066,7 +4066,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 20
   m_Sprite: {fileID: 0}
-  m_Color: {r: 0.21960784, g: 0.7137255, b: 0.75686276, a: 1}
+  m_Color: {r: 0.8980392, g: 0.21568628, b: 0.18039216, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -10798,7 +10798,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 20
   m_Sprite: {fileID: 0}
-  m_Color: {r: 0, g: 0.6603774, b: 0.19604954, a: 1}
+  m_Color: {r: 0.21568628, g: 0.7137255, b: 0.7529412, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -14614,15 +14614,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5134057364990998410, guid: f4f680977b9b84c409d6e30154305f64, type: 3}
       propertyPath: s1.b
-      value: 0.754717
+      value: 0.18093626
       objectReference: {fileID: 0}
     - target: {fileID: 5134057364990998410, guid: f4f680977b9b84c409d6e30154305f64, type: 3}
       propertyPath: s1.g
-      value: 0.71215826
+      value: 0.21635637
       objectReference: {fileID: 0}
     - target: {fileID: 5134057364990998410, guid: f4f680977b9b84c409d6e30154305f64, type: 3}
       propertyPath: s1.r
-      value: 0.2164471
+      value: 0.8962264
       objectReference: {fileID: 0}
     - target: {fileID: 5134057364990998410, guid: f4f680977b9b84c409d6e30154305f64, type: 3}
       propertyPath: s2.a
@@ -14646,15 +14646,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5134057364990998410, guid: f4f680977b9b84c409d6e30154305f64, type: 3}
       propertyPath: s3.b
-      value: 0.19607843
+      value: 0.75294125
       objectReference: {fileID: 0}
     - target: {fileID: 5134057364990998410, guid: f4f680977b9b84c409d6e30154305f64, type: 3}
       propertyPath: s3.g
-      value: 0.6627451
+      value: 0.7137255
       objectReference: {fileID: 0}
     - target: {fileID: 5134057364990998410, guid: f4f680977b9b84c409d6e30154305f64, type: 3}
       propertyPath: s3.r
-      value: 0
+      value: 0.21568629
       objectReference: {fileID: 0}
     - target: {fileID: 5134057364990998410, guid: f4f680977b9b84c409d6e30154305f64, type: 3}
       propertyPath: s4.a

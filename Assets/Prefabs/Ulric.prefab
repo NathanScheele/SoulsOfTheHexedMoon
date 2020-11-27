@@ -308,3 +308,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  s1: {r: 0, g: 0, b: 0, a: 0}
+  s2: {r: 0, g: 0, b: 0, a: 0}
+  s3: {r: 0, g: 0, b: 0, a: 0}
+  s4: {r: 0, g: 0, b: 0, a: 1}
