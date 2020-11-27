@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class FollowBehaviour : StateMachineBehaviour
 {
-    GameHandler game_handler_script;
+    GameObject player;
     BasicBunny enemy_script;
     Vector2 player_pos;
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        game_handler_script = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameHandler>();
+        player = GameObject.FindGameObjectWithTag("Player");
+        
+        player_pos = player.transform.position;
 
         enemy_script = animator.GetComponent<BasicBunny>();
-
-        player_pos = game_handler_script.getPlayerPos();
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        player_pos = game_handler_script.getPlayerPos();
+        player_pos = player.transform.position;
         float distance_to_player =  Vector2.Distance(animator.transform.position, player_pos);
 
         // Check for state changes

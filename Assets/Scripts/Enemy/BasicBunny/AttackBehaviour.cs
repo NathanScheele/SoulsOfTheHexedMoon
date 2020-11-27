@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class AttackBehaviour : StateMachineBehaviour
 {
-    GameHandler game_handler_script;
+    GameObject player;
     Vector2 player_pos;
     BasicBunny enemy_script;
     Rigidbody2D m_rigidbody;
     
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        game_handler_script = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameHandler>();
 
-        player_pos = game_handler_script.getPlayerPos();
+        player = GameObject.FindGameObjectWithTag("Player");
+        
+        player_pos = player.transform.position;
 
         enemy_script = animator.gameObject.GetComponent<BasicBunny>();
 
@@ -24,7 +25,7 @@ public class AttackBehaviour : StateMachineBehaviour
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        player_pos = game_handler_script.getPlayerPos();
+        player_pos = player.transform.position;
         float distance_to_player = Vector2.Distance(animator.transform.position, player_pos);
 
         enemy_script.TurnTowards(player_pos);
