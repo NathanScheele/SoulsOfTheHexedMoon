@@ -8,7 +8,7 @@ public class HealthBar : MonoBehaviour
     public Slider healthBar;
     public Gradient gradient;
     public PlayerHealth health;
-    public Image fill; 
+    public Image fill;
 
     // Start is called before the first frame update
     void Start()
