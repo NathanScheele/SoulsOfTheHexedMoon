@@ -27,13 +27,11 @@ TagManager:
   - HurtBox
   - Player
   - Enemy
-  - LineOfSight
   - Ground
+  - Blood
   - Pick
-  - 
   - Carrot
   - Heart
-  - 
   - 
   - 
   - 
