@@ -12,9 +12,11 @@ public class PlayerMovement : MonoBehaviour
 
     public bool playing;
     public bool moving;
+    public bool howlReady;
+    public bool daucusHurt;
     bool facingRight = true;
     bool startAttackTime;
-    bool OnGround;
+    public bool OnGround;
     bool jTimeStart;
     bool enemyClose;
     Rigidbody2D rb;
@@ -31,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
         moving = true;
         enemyClose = false;
         localScale = transform.localScale;
+        OnGround = true;
 
     }
 
@@ -38,38 +41,49 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         float hMove = Input.GetAxis("Horizontal");
-        if(hMove > 0)
-        {   
-            anim.SetBool("Run", true);
-            facingRight = true;
-        }
-        else if(hMove < 0)
-        {
-            anim.SetBool("Run", true);
-            facingRight = false;
-        }
-        else if(hMove == 0)
-        {
-            anim.SetBool("Run", false);
-        }
-        if (((facingRight) && (localScale.x < 0)) || ((!facingRight) && (localScale.x > 0)))
-        {
-            localScale.x *= -1;
-        }
-        transform.localScale = localScale;
+       
         if (playing)
         {
             if (moving)
             {
                 // Moves player left or right
                 rb.velocity = new Vector2(hMove * speed, rb.velocity.y);
+                rb.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
+                rb.constraints &= ~RigidbodyConstraints2D.FreezePositionX;
+
+                if (hMove > 0)
+                {
+                    anim.SetBool("Run", true);
+                    facingRight = true;
+                }
+                else if (hMove < 0)
+                {
+                    anim.SetBool("Run", true);
+                    facingRight = false;
+                }
+                else if (hMove == 0)
+                {
+                    anim.SetBool("Run", false);
+                }
+                if (((facingRight) && (localScale.x < 0)) || ((!facingRight) && (localScale.x > 0)))
+                {
+                    localScale.x *= -1;
+                }
+                transform.localScale = localScale;
             }
-            
+            else
+            {
+                rb.constraints = RigidbodyConstraints2D.FreezeAll;
+            }
             Jump();
             Attack();
         }
 
         if(OnGround == false)
+        {
+            anim.SetBool("OnGround", OnGround);
+        }
+        if(OnGround)
         {
             anim.SetBool("OnGround", OnGround);
         }
@@ -80,12 +94,14 @@ public class PlayerMovement : MonoBehaviour
     void Jump()
     {
         //if user presses spacebar and only if player is grounded, player jumps
-        if (Input.GetKeyDown(KeyCode.Space) &&/* OnGround &&*/ jTimeStart == false)
+        if (Input.GetKeyDown(KeyCode.Space) &&  OnGround && jTimeStart == false)
         {
             anim.SetTrigger("Jump");
             rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
             //text.SetActive(false); // disables text
             jTimeStart = true; // start next jump time
+            OnGround = false;
+            Debug.Log("Jumping");
         }
 
         if (jTimeStart && jumpTime > 0)
@@ -98,6 +114,8 @@ public class PlayerMovement : MonoBehaviour
             jTimeStart = false;
             jumpTime = 1;
         }
+
+       
     }
     
     void Attack()
@@ -114,7 +132,7 @@ public class PlayerMovement : MonoBehaviour
         //hurts enemy when in range and attacks
         if(Input.GetKeyDown(KeyCode.J) && enemyClose)
         {
-            Debug.Log("enemy hurt");
+            daucusHurt = true;
         }
         
         if (Input.GetKeyDown(KeyCode.K) && timeSinceAttack == 0)
@@ -124,16 +142,22 @@ public class PlayerMovement : MonoBehaviour
             timeSinceAttack = .5f;
             startAttackTime = true;
         }
-        
-        if (Input.GetKeyDown(KeyCode.L) && timeSinceAttack == 0/* &&  OnGround*/)
+        if(Input.GetKeyDown(KeyCode.K) && enemyClose)
+        {
+            daucusHurt = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.L) && timeSinceAttack == 0 &&  OnGround && howlReady)
         {
             //Stops player movement for 1.5f 
             anim.SetTrigger("Howl");
             moving = false;
             //moreText.SetActive(false);
             Debug.Log("ULTIMATE HOWL!");
-            timeSinceAttack = .5f;
+            timeSinceAttack = 1.5f;
             startAttackTime = true;
+            howlReady = false;
+            //hurts daucus
         }
 
         if(startAttackTime && timeSinceAttack > 0)
@@ -155,15 +179,11 @@ public class PlayerMovement : MonoBehaviour
             OnGround = true;
         }
 
-        //Enemy has to have a empty gameobject child with a collider and trigger selected,
-        //also to have tag name as EnemyArea for that child
-        /*
-        if (other.gameObject.CompareTag("EnemyArea"))
+        if (other.gameObject.CompareTag("DHurtBox"))
         {
-            //player is in range of the enemy
             enemyClose = true;
         }
-        */
+        
     }
 
     void OnTriggerExit2D(Collider2D other)
@@ -172,6 +192,11 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Ground"))
         {
             OnGround = false;
+        }
+
+        if (other.gameObject.CompareTag("DHurtBox"))
+        {
+            enemyClose = false;
         }
     }
 }

@@ -24,7 +24,12 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (hurt)
+        {
+            hurt = false;
+            LifFromDaucus(5);
+            Debug.Log(curHealth);
+        }
         if(curHealth == 0)
         {
             //player dead, stops movement
@@ -39,5 +44,24 @@ public class PlayerHealth : MonoBehaviour
             curHealth = Mathf.Max(0, curHealth - incoming_dmg);
             healthBar.SetHealth(curHealth);
         }
-    }   
+    }
+
+    public void LifFromDaucus(int life)
+    {
+        curHealth -= life;
+
+        healthBar.SetHealth(curHealth);
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("DHitBox"))
+        {
+             hurt = true;
+            
+
+        }
+    }
+
+   
 }
