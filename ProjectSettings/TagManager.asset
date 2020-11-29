@@ -13,8 +13,8 @@ TagManager:
   - Existance
   - Life
   - Moon
-  - Heart
   - Blood
+  - Heart
   layers:
   - Default
   - TransparentFX
@@ -28,11 +28,14 @@ TagManager:
   - HurtBox
   - Player
   - Enemy
+  - LineOfSight
   - Ground
-  - Blood
   - Pick
+  - 
   - Carrot
+  - Blood
   - Heart
+  - 
   - 
   - 
   - 

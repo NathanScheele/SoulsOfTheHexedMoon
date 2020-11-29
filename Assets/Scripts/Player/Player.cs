@@ -16,15 +16,13 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
-    public void takeDmg(float incoming_dmg)
-    {
+    public void takeDmg(float incoming_dmg){
         float elapsed_time = Time.time - last_dmg;
 
-        if (elapsed_time > 1)
-        {
+        if(elapsed_time > 1){
             health = Mathf.Max(0, health - incoming_dmg);
         }
     }

@@ -38,17 +38,17 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         float hMove = Input.GetAxis("Horizontal");
-        if (hMove > 0)
-        {
+        if(hMove > 0)
+        {   
             anim.SetBool("Run", true);
             facingRight = true;
         }
-        else if (hMove < 0)
+        else if(hMove < 0)
         {
             anim.SetBool("Run", true);
             facingRight = false;
         }
-        else if (hMove == 0)
+        else if(hMove == 0)
         {
             anim.SetBool("Run", false);
         }
@@ -64,16 +64,16 @@ public class PlayerMovement : MonoBehaviour
                 // Moves player left or right
                 rb.velocity = new Vector2(hMove * speed, rb.velocity.y);
             }
-
+            
             Jump();
             Attack();
         }
 
-        if (OnGround == false)
+        if(OnGround == false)
         {
             anim.SetBool("OnGround", OnGround);
         }
-
+        
 
     }
 
@@ -99,7 +99,7 @@ public class PlayerMovement : MonoBehaviour
             jumpTime = 1;
         }
     }
-
+    
     void Attack()
     {
         if (Input.GetKeyDown(KeyCode.J) && timeSinceAttack == 0)
@@ -112,11 +112,11 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //hurts enemy when in range and attacks
-        if (Input.GetKeyDown(KeyCode.J) && enemyClose)
+        if(Input.GetKeyDown(KeyCode.J) && enemyClose)
         {
             Debug.Log("enemy hurt");
         }
-
+        
         if (Input.GetKeyDown(KeyCode.K) && timeSinceAttack == 0)
         {
             anim.SetTrigger("Scratch");
@@ -124,7 +124,7 @@ public class PlayerMovement : MonoBehaviour
             timeSinceAttack = .5f;
             startAttackTime = true;
         }
-
+        
         if (Input.GetKeyDown(KeyCode.L) && timeSinceAttack == 0/* &&  OnGround*/)
         {
             //Stops player movement for 1.5f 
@@ -136,12 +136,12 @@ public class PlayerMovement : MonoBehaviour
             startAttackTime = true;
         }
 
-        if (startAttackTime && timeSinceAttack > 0)
+        if(startAttackTime && timeSinceAttack > 0)
         {
             timeSinceAttack -= Time.deltaTime;
         }
 
-        if (timeSinceAttack < 0)
+        if(timeSinceAttack < 0)
         {
             startAttackTime = false;
             moving = true;
@@ -168,7 +168,7 @@ public class PlayerMovement : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-
+        
         if (other.gameObject.CompareTag("Ground"))
         {
             OnGround = false;
