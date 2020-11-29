@@ -11,7 +11,10 @@ public class Enemy : MonoBehaviour
 
     public float atk_range, pursuit_range, atk_dmg, atk_spd,  health;
 
-    public Rigidbody2D heart;
+    //Blood particle effect
+    public GameObject effect;
+    //Heart drop
+    public GameObject heart;
 
     protected float last_dmg;
 
@@ -40,9 +43,9 @@ public class Enemy : MonoBehaviour
         }
     }
     public void die(){
-        Rigidbody2D rb = Instantiate(heart, transform.position, new Quaternion());
-
-        rb.AddForce(new Vector2(Random.Range(-1,1), Random.Range(0.5f,1)).normalized * 750);
+        //Spawns particles and heart on bunny death
+        Instantiate(heart, transform.position, Quaternion.identity);
+        Instantiate(effect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 
