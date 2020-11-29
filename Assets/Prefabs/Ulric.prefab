@@ -173,7 +173,6 @@ GameObject:
   - component: {fileID: 1661076867}
   - component: {fileID: 5134057364990998410}
   - component: {fileID: 343416789}
-  - component: {fileID: 343416796}
   - component: {fileID: 226188782}
   m_Layer: 10
   m_Name: Ulric
@@ -290,9 +289,6 @@ MonoBehaviour:
   timeSinceAttack: 0
   playing: 0
   moving: 0
-  howlReady: 0
-  daucusHurt: 0
-  OnGround: 0
 --- !u!95 &5443212665515861311
 Animator:
   serializedVersion: 3
@@ -389,23 +385,6 @@ PolygonCollider2D:
       - {x: 0.06333333, y: -0.06666667}
       - {x: 0.06333333, y: -0.060000002}
       - {x: 0.052046943, y: -0.02591152}
---- !u!114 &343416796
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5443212665515861696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a190a03300f70124d8efb1b66f548042, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  curBlood: 0
-  maxBlood: 100
-  howlMeter: {fileID: 0}
-  player: {fileID: 5443212665515861698}
-  addBlood: 0
 --- !u!61 &226188782
 BoxCollider2D:
   m_ObjectHideFlags: 0
