@@ -1,31 +1,37 @@
 fileFormatVersion: 2
-guid: e9b01dab3a63e064ca8411fe0e17c4d7
+guid: 20c7e9236a49404408b99faf12b58d74
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3444274849972564902
-    second: Daucus_0
+      213: 934519058844418439
+    second: Attack_Boss4_0
   - first:
-      213: 4992299517280293055
-    second: Daucus_1
+      213: -8812125009252953410
+    second: Attack_Boss4_1
   - first:
-      213: 2674820628447339326
-    second: Daucus_2
+      213: -5482594514619440075
+    second: Attack_Boss4_2
   - first:
-      213: 5390595092238217246
-    second: Daucus_3
+      213: -5460565943952136959
+    second: Attack_Boss4_3
   - first:
-      213: -3917833943398432343
-    second: Daucus_4
+      213: -8195438925689334122
+    second: Attack_Boss4_4
   - first:
-      213: -8232654746205289566
-    second: Daucus_5
+      213: -3182412882439634540
+    second: Attack_Boss4_5
   - first:
-      213: -2410165099473137916
-    second: Daucus_6
+      213: -4605903323924837130
+    second: Attack_Boss4_6
   - first:
-      213: 5845627332988705604
-    second: Daucus_7
+      213: -1417443798787270685
+    second: Attack_Boss4_7
+  - first:
+      213: -5763283465348257016
+    second: Attack_Boss4_8
+  - first:
+      213: -2889183033005978891
+    second: Attack_Boss4_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -47,7 +53,6 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
-  vTOnly: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -56,7 +61,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -70,7 +75,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 300
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -82,15 +87,14 @@ TextureImporter:
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
-  ignorePngGamma: 0
   applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -99,22 +103,10 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -123,10 +115,10 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -137,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Daucus_0
+      name: Attack_Boss4_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 236
-        width: 47
-        height: 64
+        y: 60
+        width: 32
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,20 +143,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5cc292c54a7330d0800000000000000
-      internalID: -3444274849972564902
+      spriteID: 781014af12418fc00800000000000000
+      internalID: 934519058844418439
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Daucus_1
+      name: Attack_Boss4_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 60
+        width: 32
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb254232efa05b580800000000000000
+      internalID: -8812125009252953410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Boss4_2
       rect:
         serializedVersion: 2
         x: 64
-        y: 236
-        width: 64
-        height: 64
+        y: 60
+        width: 32
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,20 +185,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb098dbe5f5384540800000000000000
-      internalID: 4992299517280293055
+      spriteID: 5346a944659e9e3b0800000000000000
+      internalID: -5482594514619440075
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Daucus_2
+      name: Attack_Boss4_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 172
-        width: 64
-        height: 64
+        x: 96
+        y: 60
+        width: 32
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,41 +206,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e33ad74903fde1520800000000000000
-      internalID: 2674820628447339326
+      spriteID: 105232e843c2834b0800000000000000
+      internalID: -5460565943952136959
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Daucus_3
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 172
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e10b2d00dad3fca40800000000000000
-      internalID: 5390595092238217246
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Daucus_4
+      name: Attack_Boss4_4
       rect:
         serializedVersion: 2
         x: 128
-        y: 172
-        width: 64
-        height: 64
+        y: 60
+        width: 32
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,20 +227,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a1c4ca39ce01a9c0800000000000000
-      internalID: -3917833943398432343
+      spriteID: 696d0e7e7b3f34e80800000000000000
+      internalID: -8195438925689334122
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Daucus_5
+      name: Attack_Boss4_5
       rect:
         serializedVersion: 2
         x: 0
-        y: 108
-        width: 64
-        height: 64
+        y: 0
+        width: 32
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -256,20 +248,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a30006702cbfbd80800000000000000
-      internalID: -8232654746205289566
+      spriteID: 4910f85385cc5d3d0800000000000000
+      internalID: -3182412882439634540
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Daucus_6
+      name: Attack_Boss4_6
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fc4bab745b8410c0800000000000000
+      internalID: -4605903323924837130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Boss4_7
       rect:
         serializedVersion: 2
         x: 64
-        y: 108
-        width: 64
-        height: 64
+        y: 0
+        width: 32
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -277,20 +290,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40f0cd39c9f5d8ed0800000000000000
-      internalID: -2410165099473137916
+      spriteID: 3e7543cff5a345ce0800000000000000
+      internalID: -1417443798787270685
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Daucus_7
+      name: Attack_Boss4_8
       rect:
         serializedVersion: 2
-        x: 128
-        y: 108
-        width: 64
-        height: 64
+        x: 96
+        y: 0
+        width: 32
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -298,8 +311,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44b1b108617df1150800000000000000
-      internalID: 5845627332988705604
+      spriteID: 80be8043934b400b0800000000000000
+      internalID: -5763283465348257016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_Boss4_9
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fac79ac65f87e7d0800000000000000
+      internalID: -2889183033005978891
       vertices: []
       indices: 
       edges: []

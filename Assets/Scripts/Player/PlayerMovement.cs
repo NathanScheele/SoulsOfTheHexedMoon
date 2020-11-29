@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     public bool OnGround;
     bool jTimeStart;
     bool enemyClose;
+    public CircleCollider2D cCollider;
     Rigidbody2D rb;
     Animator anim;
     Vector3 localScale;
@@ -150,6 +151,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.L) && timeSinceAttack == 0 &&  OnGround && howlReady)
         {
             //Stops player movement for 1.5f 
+            cCollider.enabled = true;
             anim.SetTrigger("Howl");
             moving = false;
             //moreText.SetActive(false);

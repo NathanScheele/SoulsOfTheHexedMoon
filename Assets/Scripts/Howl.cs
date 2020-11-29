@@ -63,6 +63,5 @@ public class Howl : MonoBehaviour
            
         }
 
-       // if(other.gameObject.CompareTag())
     }
 }
