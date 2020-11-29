@@ -22,7 +22,7 @@ public class SoulsSystem : MonoBehaviour
                 isFull[i] = true;
                 slots[i].GetComponent<Image>().color = scolor;
                 break;
-
+                
             }
         }
     }

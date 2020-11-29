@@ -176,8 +176,7 @@ MonoBehaviour:
   atk_dmg: 5
   atk_spd: 2.5
   health: 20
-  effect: {fileID: 2162892254352818619, guid: 5fee0f0b33c80ac4a8fc966359152736, type: 3}
-  heart: {fileID: 5234474821861851774, guid: e78ae981f20fcd1418c51d2dcb98dd22, type: 3}
+  heart: {fileID: 1690956052614563747, guid: 8b61dbc323b14874a9aca0ffb11b582c, type: 3}
   carrot: {fileID: 1690956052614563747, guid: 8b61dbc323b14874a9aca0ffb11b582c, type: 3}
 --- !u!1 &7187695764965426861
 GameObject:
