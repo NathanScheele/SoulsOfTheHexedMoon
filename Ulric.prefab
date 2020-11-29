@@ -174,6 +174,7 @@ GameObject:
   - component: {fileID: 5134057364990998410}
   - component: {fileID: 343416789}
   - component: {fileID: 343416796}
+  - component: {fileID: 226188782}
   m_Layer: 10
   m_Name: Ulric
   m_TagString: Player
@@ -290,6 +291,7 @@ MonoBehaviour:
   playing: 0
   moving: 0
   howlReady: 0
+  daucusHurt: 0
   OnGround: 0
 --- !u!95 &5443212665515861311
 Animator:
@@ -403,6 +405,33 @@ MonoBehaviour:
   maxBlood: 100
   howlMeter: {fileID: 0}
   player: {fileID: 5443212665515861698}
+  addBlood: 0
+--- !u!61 &226188782
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5443212665515861696}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.23333333, y: 0.13333334}
+    newSize: {x: 1.28, y: 1.28}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.23333333, y: 0.13333334}
+  m_EdgeRadius: 0
 --- !u!1 &7230470454520861757
 GameObject:
   m_ObjectHideFlags: 0

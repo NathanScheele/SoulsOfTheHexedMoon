@@ -9,7 +9,10 @@ public class DaucusHealth : MonoBehaviour
 
     public DaucusHB health;
     public DaucusScript daucus;
-   
+    public PlayerMovement player;
+    public GameObject soul;
+
+    public bool gettingHurt;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +24,19 @@ public class DaucusHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        if (player.daucusHurt)
+        {
+            IncreaseBlood(100);
+            Debug.Log(curHealth);
+            player.daucusHurt = false;
+        }
+
+        if(curHealth <= 0)
+        {
+             Instantiate(soul, transform.position, new Quaternion());
+
+            Destroy(gameObject); 
+        }
     }
 
     public void IncreaseBlood(int life)
@@ -31,5 +46,20 @@ public class DaucusHealth : MonoBehaviour
         health.SetBlood(curHealth);
     }
 
-  
+  void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("DHitBox"))
+        {
+           // gettingHurt = true;
+           // Debug.Log("Daucus Hurt");
+        }
+    } 
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            //gettingHurt = true;
+           // Debug.Log("Daucus not Hurt");
+        }
+    }
 }

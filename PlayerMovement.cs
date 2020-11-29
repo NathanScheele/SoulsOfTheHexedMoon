@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public bool playing;
     public bool moving;
     public bool howlReady;
+    public bool daucusHurt;
     bool facingRight = true;
     bool startAttackTime;
     public bool OnGround;
@@ -131,7 +132,7 @@ public class PlayerMovement : MonoBehaviour
         //hurts enemy when in range and attacks
         if(Input.GetKeyDown(KeyCode.J) && enemyClose)
         {
-            Debug.Log("enemy hurt");
+            daucusHurt = true;
         }
         
         if (Input.GetKeyDown(KeyCode.K) && timeSinceAttack == 0)
@@ -143,7 +144,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.K) && enemyClose)
         {
-            Debug.Log("enemy hurt");
+            daucusHurt = true;
         }
 
         if (Input.GetKeyDown(KeyCode.L) && timeSinceAttack == 0 &&  OnGround && howlReady)
@@ -156,6 +157,7 @@ public class PlayerMovement : MonoBehaviour
             timeSinceAttack = 1.5f;
             startAttackTime = true;
             howlReady = false;
+            //hurts daucus
         }
 
         if(startAttackTime && timeSinceAttack > 0)
@@ -177,10 +179,9 @@ public class PlayerMovement : MonoBehaviour
             OnGround = true;
         }
 
-        if (other.gameObject.CompareTag("Daucus"))
+        if (other.gameObject.CompareTag("DHurtBox"))
         {
             enemyClose = true;
-            Debug.Log("Close");
         }
         
     }
@@ -193,7 +194,7 @@ public class PlayerMovement : MonoBehaviour
             OnGround = false;
         }
 
-        if (other.gameObject.CompareTag("Daucus"))
+        if (other.gameObject.CompareTag("DHurtBox"))
         {
             enemyClose = false;
         }
