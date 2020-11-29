@@ -301,7 +301,8 @@ MonoBehaviour:
   atk_dmg: 5
   atk_spd: 0
   health: 20
-  heart: {fileID: 5234474821861851770, guid: e78ae981f20fcd1418c51d2dcb98dd22, type: 3}
+  effect: {fileID: 2162892254352818619, guid: 5fee0f0b33c80ac4a8fc966359152736, type: 3}
+  heart: {fileID: 5234474821861851774, guid: e78ae981f20fcd1418c51d2dcb98dd22, type: 3}
   l_patrol_dist: 2
   r_patrol_dist: 2
   speed: 2
