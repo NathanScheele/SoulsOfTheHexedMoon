@@ -10,11 +10,13 @@ public class Howl : MonoBehaviour
     public HowlMeter howlMeter;
     public PlayerMovement player;
     bool meterFull;
+    public bool addBlood;
 
     // Start is called before the first frame update
     void Start()
     {
         curBlood = 0;
+        
     }
 
     // Update is called once per frame
@@ -22,9 +24,10 @@ public class Howl : MonoBehaviour
     {
        if(curBlood == 100)
         {
+            Debug.Log("Meter Full");
             meterFull = true;
             player.howlReady = true;
-            if (Input.GetKeyDown(KeyCode.L))
+            if (Input.GetKeyDown(KeyCode.L) && player.OnGround)
             {
                 IncreaseBlood(-100);
             }
@@ -32,6 +35,12 @@ public class Howl : MonoBehaviour
        else if(curBlood == 0)
         {
             meterFull = false;
+        }
+        if (addBlood)
+        {
+            IncreaseBlood(50);
+            Debug.Log(curBlood);
+            addBlood = false;
         }
     }
 
@@ -49,9 +58,11 @@ public class Howl : MonoBehaviour
             if (!meterFull)
             {
                 other.gameObject.SetActive(false);
-                IncreaseBlood(50);
+                addBlood = true;
             }
            
         }
+
+       // if(other.gameObject.CompareTag())
     }
 }
