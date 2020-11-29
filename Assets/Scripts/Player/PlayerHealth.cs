@@ -24,20 +24,22 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if(curHealth == 0)
+
+        if (curHealth == 0)
         {
             //player dead, stops movement
             player.playing = false;
             FindObjectOfType<GameManager>().EndGame();
         }
     }
-    public void takeDmg(int incoming_dmg){
+    public void takeDmg(int incoming_dmg)
+    {
         float elapsed_time = Time.time - last_dmg;
 
-        if(elapsed_time > 1){
+        if (elapsed_time > 1)
+        {
             curHealth = Mathf.Max(0, curHealth - incoming_dmg);
             healthBar.SetHealth(curHealth);
         }
-    }   
+    }
 }

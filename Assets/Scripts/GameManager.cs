@@ -11,12 +11,12 @@ public class GameManager : MonoBehaviour
 
     public void EndGame()
     {
-        if(gameHasEnded == false)
+        if (gameHasEnded == false)
         {
             gameHasEnded = true;
             gameOverUI.SetActive(true);
             Time.timeScale = 0f;
-            Invoke("Restart", restartDelay);          
+            Invoke("Restart", restartDelay);
         }
     }
 

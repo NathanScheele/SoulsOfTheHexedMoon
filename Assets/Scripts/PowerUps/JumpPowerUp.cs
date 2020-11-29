@@ -13,12 +13,12 @@ public class JumpPowerUp : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Player")
+        if (collision.tag == "Player")
         {
             GameObject player = collision.gameObject;
             playerScript = player.GetComponent<PlayerMovement>();
 
-            if(playerScript)
+            if (playerScript)
             {
                 playerScript.jumpSpeed *= increase;
                 SpriteRenderer sprender = gameObject.GetComponent<SpriteRenderer>();

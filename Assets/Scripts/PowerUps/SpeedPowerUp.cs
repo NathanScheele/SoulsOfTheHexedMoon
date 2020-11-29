@@ -14,12 +14,12 @@ public class SpeedPowerUp : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Player")
+        if (collision.tag == "Player")
         {
             GameObject player = collision.gameObject;
             playerScript = player.GetComponent<PlayerMovement>();
 
-            if(playerScript)
+            if (playerScript)
             {
                 playerScript.speed *= increase;
                 SpriteRenderer sprender = gameObject.GetComponent<SpriteRenderer>();
