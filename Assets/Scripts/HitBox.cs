@@ -8,6 +8,7 @@ public class HitBox : MonoBehaviour
     PlayerHealth player_script;
     Enemy enemy_script;
     bool isPlayer;
+    int howlActivated;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,15 +23,27 @@ public class HitBox : MonoBehaviour
             isPlayer = false;
         }
     }
+    void Update()
+    {
+        howlActivated = PlayerPrefs.GetInt("HowlActivated");
+    }
     void OnTriggerEnter2D(Collider2D other){
 
         if(isPlayer && other.gameObject.tag == "Enemy"){   //Other must be Enemy
             int outgoing_dmg = 10;
 
             other.gameObject.GetComponentInParent<Enemy>().takeDmg(outgoing_dmg);
+           
         }
         else if (!isPlayer && other.gameObject.tag == "Player"){   //Other must be player
             other.gameObject.GetComponentInParent<PlayerHealth>().takeDmg((int)enemy_script.atk_dmg);
+            if (howlActivated == 1)
+            {
+                other.gameObject.GetComponentInParent<Enemy>().die();
+                Debug.Log("bunnies Dead");
+            }
         }
+
+       
     }
 }

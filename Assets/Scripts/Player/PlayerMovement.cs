@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpSpeed = 8;
     public float jumpTime = 1f;
     public float timeSinceAttack = .5f;
+    int howlA;
 
     public bool playing;
     public bool moving;
@@ -17,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     bool facingRight = true;
     bool startAttackTime;
     public bool OnGround;
+    public bool howlActivated;
     bool jTimeStart;
     bool enemyClose;
     public BoxCollider2D collider;
@@ -37,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
         enemyClose = false;
         localScale = transform.localScale;
         OnGround = true;
-
+        PlayerPrefs.SetInt("HowlActivated", 0);
     }
 
     // Update is called once per frame
@@ -149,41 +151,48 @@ public class PlayerMovement : MonoBehaviour
         {
             daucusHurt = true;
         }
+        /*
         if (howlReady)
         {
             // when you attack it hurts everybody, only change it when howl is attacking
             const float ySize = 100.0f;
             collider.size = new Vector2(2, 1.8f);
         }
+        */
         if (Input.GetKeyDown(KeyCode.L) && timeSinceAttack == 0 &&  OnGround && howlReady )
         {
-            //Stops player movement for 1.5f 
             anim.SetTrigger("Howl");
             moving = false;
-            //moreText.SetActive(false);
+            howlActivated = true;
+            PlayerPrefs.SetInt("HowlActivated", 1);
             howlSound.Play(0);
+            collider.size = new Vector2(2, 1.8f);
             Debug.Log("ULTIMATE HOWL!");
-            timeSinceAttack = 1.5f;
+            timeSinceAttack = 1.3f;
             startAttackTime = true;
             howlReady = false;
-            if (enemyClose)
-            {
-                daucusHurt = true;
-                Debug.Log("Daucus hurt");
-            }
+           
         }
 
         if(startAttackTime && timeSinceAttack > 0)
         {
             timeSinceAttack -= Time.deltaTime;
         }
+        
 
-        if(timeSinceAttack < 0)
+        if (timeSinceAttack < 0)
         {
             startAttackTime = false;
             moving = true;
             timeSinceAttack = 0;
+            if (howlActivated)
+            {
+                collider.size = new Vector2(.07f, .12f);
+                PlayerPrefs.SetInt("HowlActivated", 0);
+               
+            }
         }
+
     }
     void OnTriggerEnter2D(Collider2D other)
     {
