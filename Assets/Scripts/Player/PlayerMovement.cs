@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     bool jTimeStart;
     bool enemyClose;
     public BoxCollider2D collider;
+    AudioSource howlSound;
     Rigidbody2D rb;
     Animator anim;
     Vector3 localScale;
@@ -28,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        howlSound = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         playing = true;
@@ -159,6 +161,7 @@ public class PlayerMovement : MonoBehaviour
             anim.SetTrigger("Howl");
             moving = false;
             //moreText.SetActive(false);
+            howlSound.Play(0);
             Debug.Log("ULTIMATE HOWL!");
             timeSinceAttack = 1.5f;
             startAttackTime = true;

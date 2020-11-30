@@ -151,7 +151,19 @@ public class DaucusScript : MonoBehaviour
         Destroy(gameObject);
     }
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            anim.SetBool("Attack", true);
+        }
+    }
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            anim.SetBool("Attack", false);
+        }
+    }
 
-   
-  
 }
