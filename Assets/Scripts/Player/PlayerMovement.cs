@@ -21,7 +21,6 @@ public class PlayerMovement : MonoBehaviour
     public bool howlActivated;
     bool jTimeStart;
     bool enemyClose;
-    public BoxCollider2D collider;
     AudioSource howlSound;
     Rigidbody2D rb;
     Animator anim;
@@ -166,7 +165,6 @@ public class PlayerMovement : MonoBehaviour
             howlActivated = true;
             PlayerPrefs.SetInt("HowlActivated", 1);
             howlSound.Play(0);
-            collider.size = new Vector2(2, 1.8f);
             Debug.Log("ULTIMATE HOWL!");
             timeSinceAttack = 1.3f;
             startAttackTime = true;
@@ -187,7 +185,6 @@ public class PlayerMovement : MonoBehaviour
             timeSinceAttack = 0;
             if (howlActivated)
             {
-                collider.size = new Vector2(.07f, .12f);
                 PlayerPrefs.SetInt("HowlActivated", 0);
                
             }
