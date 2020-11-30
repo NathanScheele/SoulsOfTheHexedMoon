@@ -11,6 +11,8 @@ public class DaucusScript : MonoBehaviour
     public Transform Character;
 
     public Rigidbody2D heart;
+
+    public GameObject soul;
     private Vector3 directionOfCharacter;
 
     public float speed;
@@ -147,6 +149,7 @@ public class DaucusScript : MonoBehaviour
     {
         Rigidbody2D rb = Instantiate(heart, transform.position, new Quaternion());
 
+        Instantiate(soul,transform.position, new Quaternion());
         rb.AddForce(new Vector2(Random.Range(-1, 1), Random.Range(0.5f, 1)).normalized * 750);
         Destroy(gameObject);
     }
