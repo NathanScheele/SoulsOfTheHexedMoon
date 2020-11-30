@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 523289647}
   - component: {fileID: 523289649}
   - component: {fileID: 523289648}
-  - component: {fileID: 2133149320}
   m_Layer: 8
   m_Name: HitBox
   m_TagString: Player
@@ -52,7 +51,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 523289646}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -71,22 +70,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.079964496, y: 0.12935239}
   m_EdgeRadius: 0
---- !u!58 &2133149320
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 523289646}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1.59
 --- !u!1 &2061399789
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,7 +264,7 @@ MonoBehaviour:
   howlReady: 0
   daucusHurt: 0
   OnGround: 0
-  collider: {fileID: 523289648}
+  howlActivated: 0
 --- !u!95 &5443212665515861311
 Animator:
   serializedVersion: 3
@@ -329,16 +312,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e86052d0f8b756246a3edc6b032e5fe8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFull: 00
+  isFull: 00000000
   slots:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  s1: {r: 0, g: 0, b: 0, a: 0}
-  s2: {r: 0, g: 0, b: 0, a: 0}
-  s3: {r: 0, g: 0, b: 0, a: 0}
-  s4: {r: 0, g: 0, b: 0, a: 1}
+  s1: {r: 0.8431373, g: 0.49411768, b: 0.13333334, a: 1}
+  s2: {r: 0.19607845, g: 0.6431373, b: 0.6784314, a: 1}
+  s3: {r: 0.7686275, g: 0.23529413, b: 0.20784315, a: 1}
+  s4: {r: 0.8117648, g: 0.8117648, b: 0.8117648, a: 1}
 --- !u!61 &384536716
 BoxCollider2D:
   m_ObjectHideFlags: 0
