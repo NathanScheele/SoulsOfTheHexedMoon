@@ -149,6 +149,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (howlReady)
         {
+            // when you attack it hurts everybody, only change it when howl is attacking
             const float ySize = 100.0f;
             collider.size = new Vector2(2, 1.8f);
         }

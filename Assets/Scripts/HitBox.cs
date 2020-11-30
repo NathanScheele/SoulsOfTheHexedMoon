@@ -8,7 +8,6 @@ public class HitBox : MonoBehaviour
     PlayerHealth player_script;
     Enemy enemy_script;
     bool isPlayer;
-
     // Start is called before the first frame update
     void Start()
     {

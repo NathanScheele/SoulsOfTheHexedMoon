@@ -52,7 +52,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 523289646}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -81,7 +81,7 @@ CircleCollider2D:
   m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -280,7 +280,7 @@ MonoBehaviour:
   howlReady: 0
   daucusHurt: 0
   OnGround: 0
-  cCollider: {fileID: 2133149320}
+  collider: {fileID: 523289648}
 --- !u!95 &5443212665515861311
 Animator:
   serializedVersion: 3

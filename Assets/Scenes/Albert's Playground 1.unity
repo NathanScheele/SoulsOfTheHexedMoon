@@ -14290,10 +14290,6 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 347853995}
-    - target: {fileID: 2133149320, guid: f4f680977b9b84c409d6e30154305f64, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5134057364990998410, guid: f4f680977b9b84c409d6e30154305f64, type: 3}
       propertyPath: slots.Array.data[0]
       value: 
