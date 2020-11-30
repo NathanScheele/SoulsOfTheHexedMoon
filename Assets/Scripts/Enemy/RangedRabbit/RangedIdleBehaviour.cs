@@ -20,6 +20,7 @@ public class RangedIdleBehaviour : StateMachineBehaviour
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        player_pos = player.transform.position;
        float distance_to_player = Vector2.Distance(animator.transform.position, player_pos);
 
        if(distance_to_player <= enemy_script.pursuit_range){
