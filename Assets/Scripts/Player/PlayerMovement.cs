@@ -147,11 +147,13 @@ public class PlayerMovement : MonoBehaviour
         {
             daucusHurt = true;
         }
-
-        if (Input.GetKeyDown(KeyCode.L) && timeSinceAttack == 0 &&  OnGround && howlReady)
+        if (howlReady)
+        {
+            cCollider.enabled = true;
+        }
+        if (Input.GetKeyDown(KeyCode.L) && timeSinceAttack == 0 &&  OnGround && howlReady )
         {
             //Stops player movement for 1.5f 
-            cCollider.enabled = true;
             anim.SetTrigger("Howl");
             moving = false;
             //moreText.SetActive(false);
@@ -159,7 +161,11 @@ public class PlayerMovement : MonoBehaviour
             timeSinceAttack = 1.5f;
             startAttackTime = true;
             howlReady = false;
-            //hurts daucus
+            if (enemyClose)
+            {
+                daucusHurt = true;
+                Debug.Log("Daucus hurt");
+            }
         }
 
         if(startAttackTime && timeSinceAttack > 0)
@@ -185,7 +191,7 @@ public class PlayerMovement : MonoBehaviour
         {
             enemyClose = true;
         }
-        
+
     }
 
     void OnTriggerExit2D(Collider2D other)

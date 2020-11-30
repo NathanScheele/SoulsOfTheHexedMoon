@@ -26,7 +26,7 @@ public class DaucusHealth : MonoBehaviour
     {
         if (player.daucusHurt)
         {
-            IncreaseBlood(100);
+            IncreaseBlood(10);
             Debug.Log(curHealth);
             player.daucusHurt = false;
         }

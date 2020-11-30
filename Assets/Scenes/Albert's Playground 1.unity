@@ -14074,6 +14074,14 @@ PrefabInstance:
       propertyPath: dHealth
       value: 
       objectReference: {fileID: 1231720255}
+    - target: {fileID: 1638963070, guid: 5cc871f0a3701f14ca0f1c2526bdfe71, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1638963070, guid: 5cc871f0a3701f14ca0f1c2526bdfe71, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3207972052729864360, guid: 5cc871f0a3701f14ca0f1c2526bdfe71, type: 3}
       propertyPath: m_Name
       value: DaucusMeter 1
@@ -14282,6 +14290,10 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 347853995}
+    - target: {fileID: 2133149320, guid: f4f680977b9b84c409d6e30154305f64, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5134057364990998410, guid: f4f680977b9b84c409d6e30154305f64, type: 3}
       propertyPath: slots.Array.data[0]
       value: 
@@ -15872,6 +15884,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6508924840826663938, guid: 9edc2ec576e9157449f594caf55a29d3, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 2506b0700150f5d41a15e312c37ef320, type: 2}
     - target: {fileID: 6508924840826663939, guid: 9edc2ec576e9157449f594caf55a29d3, type: 3}
       propertyPath: health
       value: 
