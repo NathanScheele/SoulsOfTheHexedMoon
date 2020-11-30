@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     public bool OnGround;
     bool jTimeStart;
     bool enemyClose;
-    public CircleCollider2D cCollider;
+    public BoxCollider2D collider;
     Rigidbody2D rb;
     Animator anim;
     Vector3 localScale;
@@ -149,7 +149,8 @@ public class PlayerMovement : MonoBehaviour
         }
         if (howlReady)
         {
-            cCollider.enabled = true;
+            const float ySize = 100.0f;
+            collider.size = new Vector2(2, 1.8f);
         }
         if (Input.GetKeyDown(KeyCode.L) && timeSinceAttack == 0 &&  OnGround && howlReady )
         {
