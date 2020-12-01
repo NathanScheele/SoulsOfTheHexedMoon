@@ -191,7 +191,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 PlayerPrefs.SetInt("HowlActivated", 0);
                 OnGround = true;
-
             }
         }
 
