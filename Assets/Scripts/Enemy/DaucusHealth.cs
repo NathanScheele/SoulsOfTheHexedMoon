@@ -26,7 +26,7 @@ public class DaucusHealth : MonoBehaviour
     {
         if (player.daucusHurt)
         {
-            IncreaseBlood(10);
+            IncreaseBlood(5);
             Debug.Log(curHealth);
             player.daucusHurt = false;
         }
@@ -34,7 +34,7 @@ public class DaucusHealth : MonoBehaviour
         if(curHealth <= 0)
         {
              Instantiate(soul, transform.position, new Quaternion());
-
+            player.dHealth.SetActive(false);
             Destroy(gameObject); 
         }
     }

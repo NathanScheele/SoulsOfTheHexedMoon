@@ -86,8 +86,13 @@ public class PlayerMovement : MonoBehaviour
             Jump();
             Attack();
         }
+        else
+        {
+            dHealth.SetActive(false);
 
-        if(OnGround == false)
+        }
+
+        if (OnGround == false)
         {
             anim.SetBool("OnGround", OnGround);
         }
