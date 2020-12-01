@@ -10,6 +10,10 @@ public class PlayerMovement : MonoBehaviour
     public float jumpTime = 1f;
     public float timeSinceAttack = .5f;
     int howlA;
+    public GameObject daucus;
+    public AudioSource camAudio;
+    public AudioClip bossSong;
+    public GameObject dHealth;
 
     public bool playing;
     public bool moving;
@@ -186,7 +190,8 @@ public class PlayerMovement : MonoBehaviour
             if (howlActivated)
             {
                 PlayerPrefs.SetInt("HowlActivated", 0);
-               
+                OnGround = true;
+
             }
         }
 
@@ -201,6 +206,15 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.CompareTag("DHurtBox"))
         {
             enemyClose = true;
+        }
+
+        if (other.gameObject.CompareTag("StartMnD"))
+        {
+            daucus.SetActive(true);
+            dHealth.SetActive(true);
+            other.gameObject.SetActive(false);
+            camAudio.clip = bossSong;
+            camAudio.Play();
         }
 
     }

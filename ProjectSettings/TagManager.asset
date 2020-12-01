@@ -18,6 +18,7 @@ TagManager:
   - Daucus
   - DHitBox
   - DHurtBox
+  - StartMnD
   layers:
   - Default
   - TransparentFX

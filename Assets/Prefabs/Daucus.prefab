@@ -130,7 +130,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6508924840826663936
 Transform:
   m_ObjectHideFlags: 0
@@ -259,6 +259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Character: {fileID: 0}
   heart: {fileID: 5234474821861851770, guid: e78ae981f20fcd1418c51d2dcb98dd22, type: 3}
+  soul: {fileID: 978259887440591954, guid: 115788e4525e95c40899222ed81886fe, type: 3}
   speed: 1
   tTime: 1
   startTime: 0
