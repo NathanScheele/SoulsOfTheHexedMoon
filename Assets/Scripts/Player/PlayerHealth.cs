@@ -36,10 +36,12 @@ public class PlayerHealth : MonoBehaviour
             player.playing = false;
             FindObjectOfType<GameManager>().EndGame();
         }
+        /*
         if (player.howlActivated)
         {
             LifFromDaucus(-25);            
         }
+        */
     }
     public void takeDmg(int incoming_dmg){
         float elapsed_time = Time.time - last_dmg;
