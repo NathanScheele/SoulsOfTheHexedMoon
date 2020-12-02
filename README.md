@@ -3,6 +3,14 @@ A game made by Rift-Wolves, a group of MoonRift Entertainment interns.
 
 ***
 
+## Screenshots
+![screenshot1](https://github.com/NathanScheele/SoulsOfTheHexedMoon/blob/main/Media/Screenshot%201.png)
+![screenshot1](https://github.com/NathanScheele/SoulsOfTheHexedMoon/blob/main/Media/Screenshot%202.png)
+![screenshot1](https://github.com/NathanScheele/SoulsOfTheHexedMoon/blob/main/Media/Screenshot%203.png)
+
+## Trailer
+[Youtube Link](https://youtu.be/G3X8qJRNzOo)
+
 ### What you'll need to contribute to/run this project
 - Clone this repo on your local machine.
   -`git clone https://github.com/NathanScheele/SoulsOfTheHexedMoon.git`
